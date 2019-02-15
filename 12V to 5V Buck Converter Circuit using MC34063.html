@@ -1,0 +1,2223 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram -->
+<html lang="en" dir="ltr" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" class="js js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>12V to 5V Buck Converter Circuit using MC34063</title>
+    <!--[if IE]><![endif]-->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<![endif]-->
+<link rel="shortcut icon" href="https://circuitdigest.com/sites/default/files/favicon.png" type="image/png">
+<meta name="description" content="we are building a buck converter circuit using MC34063 to convert 12V to 5V voltage as sometimes an higher voltage battery is required for different part of the circuit and we need to lower the voltage.">
+<meta name="abstract" content="12V to 5V Buck Converter Circuit Diagram">
+<meta name="keywords" content="Buck Converter Circuit using MC34063, 12V to 5V Buck Converter, MC34063 buck converter circuit, lower the voltage, power electronics, step down voltage circuit">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram">
+<link rel="shortlink" href="https://circuitdigest.com/node/2357">
+  <meta class="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Favicon -->
+
+  <!-- Google Fonts -->
+  <link href="./12V to 5V Buck Converter Circuit using MC34063_files/css" rel="stylesheet" type="text/css">
+  <link href="./12V to 5V Buck Converter Circuit using MC34063_files/css(1)" rel="stylesheet" type="text/css">
+  <link href="./12V to 5V Buck Converter Circuit using MC34063_files/css(2)" rel="stylesheet" type="text/css">
+<!--<script src="//platform-api.sharethis.com/js/sharethis.js#property=5b2e22d55a9f7800116e2c85&product=inline-share-buttons"></script>-->
+
+  <link type="text/css" rel="stylesheet" href="./12V to 5V Buck Converter Circuit using MC34063_files/font-awesome.min.css" media="all">
+<link type="text/css" rel="stylesheet" href="./12V to 5V Buck Converter Circuit using MC34063_files/css__FPG2Sp4mCg82UHJ66mlmKg7CVx8izY0iWmRSBpl4EMs__XUgGxz4ldJ6XegtGpGjXFquXopJ2TfP7GmFT0GrtahY__Si4nJgwqcukDsAs0UYzgS7s-fYCWJKHDSMD2ZJhG910.css" media="all">
+<style type="text/css" media="all">
+/* <![CDATA[ */
+#sliding-popup.sliding-popup-bottom{background:#373737;}#sliding-popup .popup-content #popup-text h1,#sliding-popup .popup-content #popup-text h2,#sliding-popup .popup-content #popup-text h3,#sliding-popup .popup-content #popup-text p{color:#fff !important;}
+
+/* ]]> */
+</style>
+   <script async="" src="./12V to 5V Buck Converter Circuit using MC34063_files/analytics.js.download"></script><script type="text/javascript" src="./12V to 5V Buck Converter Circuit using MC34063_files/jquery-1.10.2.min.js.download"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery||document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js'>\x3C/script>");
+//--><!]]>
+</script>
+<script type="text/javascript" src="./12V to 5V Buck Converter Circuit using MC34063_files/js__UFd32amsXsa3hC6-ip4Uz0bPGDKRterc4YNkZs0Ahqo__gH5UBVJOO8LhUSg4MwMBJml5owGhpKspbXY3KdwP4Dw__Si4nJgwqcukDsAs0UYzgS7s-fYCWJKHDSMD2ZJhG910.js.download"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings,{basePath:"\/",pathPrefix:"",ajaxPageState:{theme:"admag",theme_token:"y_GWqLwL8MTCRJ6cIDPt1LtWUis3nTBCPimA0VqyFZw",js:{"\/\/code.jquery.com\/jquery-1.10.2.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/custom_module\/welcome_ad.js":1,"sites\/all\/modules\/custom_module\/custom_change.js":1,"sites\/all\/modules\/image_caption\/image_caption.min.js":1,"sites\/all\/modules\/custom_module\/custom_module.js":1,"sites\/all\/modules\/tb_megamenu\/js\/tb-megamenu-frontend.js":1,"sites\/all\/modules\/tb_megamenu\/js\/tb-megamenu-touch.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"sites\/all\/modules\/ajaxblocks\/ajaxblocks.js":1,"sites\/all\/themes\/admag\/js\/modernizr.min.js":1,"sites\/all\/themes\/admag\/plugins\/bootstrap\/js\/bootstrap.js":1,"sites\/all\/themes\/admag\/js\/plugins.js":1,"sites\/all\/themes\/admag\/js\/script.js":1,"sites\/all\/modules\/eu_cookie_compliance\/js\/eu_cookie_compliance.js":1},css:{"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/4.4.0\/css\/font-awesome.min.css":1,"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/simplenews\/simplenews.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/custom_module\/custom_module.css":1,"sites\/all\/modules\/tb_megamenu\/css\/bootstrap.css":1,"sites\/all\/modules\/tb_megamenu\/css\/base.css":1,"sites\/all\/modules\/tb_megamenu\/css\/default.css":1,"sites\/all\/modules\/tb_megamenu\/css\/compatibility.css":1,"sites\/all\/modules\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"sites\/all\/themes\/admag\/plugins\/bootstrap\/css\/bootstrap.min.css":1,"sites\/all\/themes\/admag\/plugins\/font-awesome\/css\/font-awesome.min.css":1,"sites\/all\/themes\/admag\/css\/customizer.css":1,"sites\/all\/themes\/admag\/css\/style.css":1,"sites\/all\/themes\/admag\/css\/custom.css":1,"0":1}},urlIsAjaxTrusted:{"\/electronic-circuits\/12v-to-5v-buck-converter-circuit-diagram":true,"\/electronic-circuits\/12v-to-5v-buck-converter-circuit-diagram?destination=node\/2357":true},eu_cookie_compliance:{popup_enabled:1,popup_agreed_enabled:0,popup_hide_agreed:0,popup_clicking_confirmation:1,popup_scrolling_confirmation:0,popup_html_info:"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Cp\u003E\u003Cspan style=\u0022font-size:14px\u0022\u003E\u003Cspan style=\u0022font-family:arial,helvetica,sans-serif\u0022\u003EThis website uses cookies to improve user experience. By using the website you are giving your consent to set cookies. For more information, read our \u003Cu\u003E\u003Ca href=\u0022https:\/\/circuitdigest.com\/cookie-policy\u0022 rel=\u0022nofollow\u0022 target=\u0022_blank\u0022\u003Ecookie policy\u003C\/a\u003E\u003C\/u\u003E and \u003Cu\u003E\u003Ca href=\u0022http:\/\/circuitdigest.com\/privacy-policy\u0022 rel=\u0022nofollow\u0022 target=\u0022_blank\u0022\u003Eprivacy policy\u003C\/a\u003E\u003C\/u\u003E.\u003C\/span\u003E\u003C\/span\u003E\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button\u0022\u003EOK, I Understand\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E",use_mobile_message:false,mobile_popup_html_info:"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n          \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button\u0022\u003EOK, I Understand\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n",mobile_breakpoint:"768",popup_html_agreed:"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThank you for accepting cookies\u003C\/h2\u003E\n\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button\u0022\u003EHide\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E",popup_use_bare_css:false,popup_height:"auto",popup_width:"100%",popup_delay:1e3,popup_link:"\/cookie-policy",popup_link_new_window:1,popup_position:null,popup_language:"en",better_support_for_screen_readers:0,reload_page:0,domain:"",popup_eu_only_js:0,cookie_lifetime:"100",disagree_do_not_show_popup:0},googleanalytics:{trackOutbound:1,trackMailto:1,trackDownload:1,trackDownloadExtensions:"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},ajaxblocks:"blocks=block-6\u0026path=node\/2357"});
+//--><!]]>
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!--Google DFP code-->
+  <script async="async" src="./12V to 5V Buck Converter Circuit using MC34063_files/gpt.js.download"></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+	var mapping_leaderboard = googletag.sizeMapping().
+	addSize([992, 0], [728, 90]). //desktop
+	addSize([768, 0], [728, 90]). //tablet
+	addSize([320, 0], [[336, 42],[300, 50]]). //mobile
+	addSize([0, 0], [[728, 90], [1, 1]]). //other
+	build();
+
+    googletag.defineSlot('/21034905/boombox2', [300, 250], 'div-gpt-ad-1533626231783-1').addService(googletag.pubads());
+    googletag.defineSlot('/21034905/skyscraper_ad', [160, 600], 'div-gpt-ad-1490853271798-1').addService(googletag.pubads());
+    googletag.defineSlot('/21034905/welcome_ad', [640, 480], 'div-gpt-ad-1490853271798-2').addService(googletag.pubads());
+	googletag.defineSlot('/21034905/boombox_bottom', [300, 250], 'div-gpt-ad-1533626231783-0').addService(googletag.pubads());
+	googletag.defineSlot('/21034905/leaderboard', [728, 90], 'div-gpt-ad-1491291145553-2').defineSizeMapping(mapping_leaderboard).addService(googletag.pubads());
+	// frontrightbar  googletag.defineSlot('/21034905/content_top', [650, 90], 'div-gpt-ad-1519570476979-1').addService(googletag.pubads());
+	googletag.defineSlot('/21034905/Skyscraper_ad2', [160, 600], 'div-gpt-ad-1508834807558-0').addService(googletag.pubads());
+    googletag.defineSlot('/21034905/Welcome_Ad2', [640, 480], 'div-gpt-ad-1508834807558-1').addService(googletag.pubads());
+	googletag.defineSlot('/21034905/Leaderboard_Homepage_600x90', [600, 90], 'div-gpt-ad-1519570476979-0').addService(googletag.pubads());
+	googletag.defineSlot('/21034905/Billboard', [970, 250], 'div-gpt-ad-1522423126716-0').addService(googletag.pubads());
+	googletag.defineSlot('/21034905/Welcome_Ad3', [640, 480], 'div-gpt-ad-1530018046511-0').addService(googletag.pubads());
+    googletag.defineSlot('/21034905/Welcome_Ad4', [640, 480], 'div-gpt-ad-1530018046511-1').addService(googletag.pubads());
+  //  googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+<!--air push code-->
+<!--facebook like box js, separated from Block for Google site speed score-->
+<!-- PopAds.net Popunder Code for circuitdigest.com -->
+<!-- PopAds.net Popunder Code End -->
+<!-- Header Tag Code Insticator -->
+<!-- End Header Tag Code Insticator -->
+<!-- pushengage -->
+<script src="./12V to 5V Buck Converter Circuit using MC34063_files/1257.js.download"></script>
+<script>
+_pe.subscribe('NewURL');
+</script>
+<script src="./12V to 5V Buck Converter Circuit using MC34063_files/saved_resource" data-sumo-site-id="4719271394b806c14a9f6b34b33c3c23804f96d4ed413ee0db3a1ef55031a5f5" async="async"></script>
+<style type="text/css">#mc_embed_signup input.mce_inline_error { border-color:#6B0505; } #mc_embed_signup div.mce_inline_error { margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff; }</style><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style type="text/css">.c1-ui-state-hover {background-color:yellow !important; padding:5px !important }</style></head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-2357 node-type-electronic-circuits eu-cookie-compliance-processed" style="zoom: 1;">
+    <div id="main" class="header-style1">
+  
+
+
+  
+<style>@media (min-width:992px){ li[data-id="1717"] a{border-bottom: 3px solid red; padding-bottom: 11px !important;} }</style>
+<script>(function ($) {
+	       Drupal.behaviors.customToggler = {
+         attach: function(context, settings){
+  $('li[data-id="1717"] a').attr("target", "_blank");
+  $('#sidebar-tab-1 .more-link a').attr("target", "_blank");
+$('#sidebar-tab-3 .more-link a').attr("target", "_blank");
+$('#sidebar-tab-2 .more-link a').attr("target", "_blank");
+$('#block-views-ti-videos-block-13 .more-link a').attr("target", "_blank");
+$('#block-views-ti-videos-block-14 .more-link a').attr("target", "_blank");
+		 }
+		   };
+})(jQuery);</script>
+ <header class="header-wrapper clearfix">
+
+    <div class="header animated slideDown headroom--top" id="header">
+      <div class="container">
+        <div class="mag-content">
+          <div class="row">
+            <div class="col-md-12">
+                          <!-- Mobile Menu Button -->
+            <a class="navbar-toggle collapsed" id="nav-button" href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#mobile-nav">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a><!-- .navbar-toggle -->
+
+            <!-- Main Nav Wrapper -->
+            <nav class="navbar mega-menu">
+              
+	      <h1 class="logo">
+		 <a href="https://circuitdigest.com/" title="Home" rel="home">
+            <img src="./12V to 5V Buck Converter Circuit using MC34063_files/cd_logo.png" alt="Home">
+        </a></h1>
+		
+		
+                      
+              <!-- Navigation Menu -->
+                          <div class="navbar-collapse collapse">
+			     	      <div class="region region-main-menu">
+    <div id="block-tb-megamenu-main-menu" class="block block-tb-megamenu no-bg no-margin">
+
+    
+  <div class="content">
+    <div class="tb-megamenu tb-megamenu-main-menu">
+      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar tb-megamenu-button menuIstance-processed" type="button">
+      <i class="fa fa-reorder"></i>
+    </button>
+    <div class="nav-collapse  always-show">
+    <ul class="tb-megamenu-nav nav level-0 items-9">
+  <li data-id="1632" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega">
+  <a href="https://circuitdigest.com/news">
+        
+    News          </a>
+  </li>
+
+<li data-id="1133" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega">
+  <a href="https://circuitdigest.com/tech-articles">
+        
+    Articles          </a>
+  </li>
+
+<li data-id="1633" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega">
+  <a href="https://circuitdigest.com/tutorials">
+        
+    Tutorials          </a>
+  </li>
+
+<li data-id="1680" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="center" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega mega-align-center dropdown">
+  <a href="https://circuitdigest.com/electronics-projects" class="dropdown-toggle">
+        
+    Projects          <span class="caret"></span>
+          </a>
+  <div data-class="" data-width="650" style="width: 650px;" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child animated fadeIn">
+  <div class="mega-dropdown-inner">
+    <div class="tb-megamenu-row row-fluid">
+  <div data-class="" data-width="3" data-hidewcol="0" id="tb-megamenu-column-1" class="tb-megamenu-column span3  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul class="tb-megamenu-subnav mega-nav level-1 items-4">
+  <li data-id="866" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/555-timer-circuits">
+        
+    555 Timer Circuits          </a>
+  </li>
+
+<li data-id="1132" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/op-amp-circuits">
+        
+    Op-amp Circuits          </a>
+  </li>
+
+<li data-id="1682" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/audio-circuits">
+        
+    Audio Circuits          </a>
+  </li>
+
+<li data-id="851" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/electronic-circuits">
+        
+    All Electronic Circuits          </a>
+  </li>
+</ul>
+  </div>
+</div>
+
+<div data-class="" data-width="3" data-hidewcol="" id="tb-megamenu-column-2" class="tb-megamenu-column span3  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul class="tb-megamenu-subnav mega-nav level-1 items-4">
+  <li data-id="1032" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/arduino-projects">
+        
+    Arduino Projects          </a>
+  </li>
+
+<li data-id="1456" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/simple-raspberry-pi-projects-for-beginners">
+        
+    Raspberry Pi Projects          </a>
+  </li>
+
+<li data-id="1681" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/msp430-projects">
+        
+    MSP430 Projects          </a>
+  </li>
+
+<li data-id="1491" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/esp8266-projects">
+        
+    ESP8266 Projects          </a>
+  </li>
+</ul>
+  </div>
+</div>
+
+<div data-class="" data-width="3" data-hidewcol="" id="tb-megamenu-column-3" class="tb-megamenu-column span3  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul class="tb-megamenu-subnav mega-nav level-1 items-4">
+  <li data-id="1464" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/pic-microcontroller-projects">
+        
+    PIC Projects          </a>
+  </li>
+
+<li data-id="945" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/avr-microcontroller-projects">
+        
+    AVR Projects          </a>
+  </li>
+
+<li data-id="1033" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/8051-microcontroller-projects">
+        
+    8051 Projects          </a>
+  </li>
+
+<li data-id="1461" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="http://circuitdigest.com/internet-of-things-iot-projects" title="IoT Projects">
+        
+    IoT Projects          </a>
+  </li>
+</ul>
+  </div>
+</div>
+
+<div data-class="" data-width="3" data-hidewcol="" id="tb-megamenu-column-4" class="tb-megamenu-column span3  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul class="tb-megamenu-subnav mega-nav level-1 items-3">
+  <li data-id="1485" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/diy-pcb-projects">
+        
+    PCB Projects          </a>
+  </li>
+
+<li data-id="1492" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/arduino-esp8266-projects" title="Arduino ESP8266 Projects">
+        
+    Arduino ESP8266 Projects          </a>
+  </li>
+
+<li data-id="944" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="center" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega mega-align-center">
+  <a href="https://circuitdigest.com/microcontroller-projects" title="All Microcontroller Projects">
+        
+    All Microcontroller Projects          </a>
+  </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+
+<li data-id="1454" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega">
+  <a href="https://circuitdigest.com/forums">
+        
+    Forum          </a>
+  </li>
+
+<li data-id="874" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown">
+  <a href="https://circuitdigest.com/contact" class="dropdown-toggle" title="Contact">
+        
+    Contact          <span class="caret"></span>
+          </a>
+  <div data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child animated fadeIn">
+  <div class="mega-dropdown-inner">
+    <div class="tb-megamenu-row row-fluid">
+  <div data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-5" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul class="tb-megamenu-subnav mega-nav level-1 items-1">
+  <li data-id="1448" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="https://circuitdigest.com/advertise">
+        
+    Advertise          </a>
+  </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+</ul>
+      </div>
+  </div>
+  </div>
+</div>
+  </div>
+ 
+            </div><!-- .navbar-collapse -->              <!-- End Navigation Menu -->
+
+              <div class="header-right">
+                <div class="social-icons">
+                  <a target="_blank" href="https://www.facebook.com/circuitdigest/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Facebook"><i class="fa fa-facebook fa-lg"></i></a>
+                  <a target="_blank" href="https://twitter.com/CircuitDigest" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Twitter"><i class="fa fa-twitter fa-lg"></i></a>
+                  <a target="_blank" href="https://plus.google.com/+Circuitdigest" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Google+"><i class="fa fa-google-plus fa-lg"></i></a>
+                  <!-- Only for Fixed Sidebar Layout -->
+                  <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#" class="fixed-button navbar-toggle" id="fixed-button">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                  </a><!-- .fixed-button -->
+                </div><!-- .social-icons -->
+              </div><!-- .header-right -->
+
+            </nav><!-- .navbar -->
+
+            <div id="sb-search" class="sb-search">
+ <form method="post" id="search-block-form" accept-charset="UTF-8">
+                <input class="sb-search-input" placeholder="Enter your search text..." type="text" value="" name="search" id="search" onkeydown="Javascript: if (event.keyCode==13) {location.href=&#39;/search/node/&#39;+ document.getElementById(&#39;search&#39;).value; return false;}">
+                <input class="sb-search-submit" type="button" value="" onclick="return location.href=&#39;/search/node/&#39;+ document.getElementById(&#39;search&#39;).value;">
+
+                <span class="sb-icon-search fa fa-search" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Search"></span>
+              </form>
+            </div><!-- .sb-search -->            </div>
+          </div>
+        </div><!-- .mag-content -->
+      </div><!-- .container -->
+    </div><!-- .header -->
+    	
+        	
+	
+  </header><!-- .header-wrapper -->
+  
+  <div class="container main-wrapper">
+    
+    <!-- End Main Banner -->
+    	<div class="mag-content clearfix">
+  <div class="row">
+    <div class="col-md-12">
+	<!-- hide in mobile- see custom.css- to serve adsense on mobile and dfp on desktop -->
+      <div class="ad728-wrapper">
+<center><!-- /21034905/Billboard -->
+<!-- /21034905/Billboard -->
+<div id="div-gpt-ad-1522423126716-0" style="height:250px; width:970px;">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1522423126716-0'); });
+</script>
+</div></center>
+      </div>
+	  <!-- hide in desktop see custom.css -->
+<div class="ad728-wrapper-mob"> 
+<center><script async="" src="./12V to 5V Buck Converter Circuit using MC34063_files/f.txt"></script>
+<!-- CircuitDigest_Billboard -->
+<ins class="adsbygoogle" style="display:inline-block;width:970px;height:250px" data-ad-client="ca-pub-4104019148699772" data-ad-slot="4112056518"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center>
+</div>
+	  
+    </div>
+  </div>
+</div>
+	<!-- End Main Banner -->
+         <div class="tabs"></div>                                    <div class="main-content mag-content clearfix">	
+						    <!--  <div class="row blog-content" data-stickyparent> -->
+	   <div class="row blog-content">
+	 	 
+			<!--<div class="col-md-8" data-stickycolumn>--> <div class="col-md-8">        
+             <article class="post-wrapper clearfix">
+ 
+   <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    
+
+<header class="post-header"> 
+              <h1 class="post-title">
+               <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram">12V to 5V Buck Converter Circuit using MC34063</a>
+              </h1><!-- .post-title -->
+			  
+              <span class="category bgcolor2">
+			                <a href="https://circuitdigest.com/power-electronics">power</a>              </span>
+	                    <p class="simple-share">
+                <span>By<a href="https://circuitdigest.com/electronic-circuits/page_author.html"><b style="margin-left:-3px;"><span rel="sioc:has_creator"></span></b></a><b style="margin-left:-3px;"><a href="https://circuitdigest.com/users/sourav-gupta" title="View user profile." class="username" xml:lang="" about="/users/sourav-gupta" typeof="sioc:UserAccount" property="foaf:name" datatype="">Sourav Gupta</a></b></span>
+                <span><span class="article-date"><i class="fa fa-clock-o"></i>Jul 20, 2018</span></span>
+                <!-- <span><i class="fa fa-eye"></i> </span> -->
+              
+				<a class="comments-count" href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#comments">3</a>
+              </p>
+
+			      			  
+              <figure class="image-overlay">
+
+		<!--
+THIS FILE IS NOT USED AND IS HERE AS A STARTING POINT FOR CUSTOMIZATION ONLY.
+See http://api.drupal.org/api/function/theme_field/7 for details.
+After copying this file to your theme's folder and customizing it, remove this
+HTML comment.
+-->
+<div class="field field-name-field-project-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><span class="image-caption-container image-caption-container-none" style="display:inline-block;"><img class="caption caption-processed" typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/12V-to-5V-Buck-Converter-Circuit-using-MC34063.jpg" alt="12V to 5V Buck Converter Circuit using MC34063" title="12V to 5V Buck Converter Circuit using MC34063"><span style="display:block;" class="image-caption">12V to 5V Buck Converter Circuit using MC34063</span></span></div>
+      </div>
+</div>
+		
+
+              </figure>
+            </header><!-- .post-header -->
+
+            <div class="post-content clearfix">
+             				 <!--
+THIS FILE IS NOT USED AND IS HERE AS A STARTING POINT FOR CUSTOMIZATION ONLY.
+See http://api.drupal.org/api/function/theme_field/7 for details.
+After copying this file to your theme's folder and customizing it, remove this
+HTML comment.
+-->
+<div class="field field-name-field-ad-code-top field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><center><div style="margin-bottom: 5px; margin-right: 25px;"> </div></center></div>
+      </div>
+</div>
+<!--
+THIS FILE IS NOT USED AND IS HERE AS A STARTING POINT FOR CUSTOMIZATION ONLY.
+See http://api.drupal.org/api/function/theme_field/7 for details.
+After copying this file to your theme's folder and customizing it, remove this
+HTML comment.
+-->
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p class="rtejustify">In the previous tutorial, we demonstrated detailed design of <a href="https://circuitdigest.com/electronic-circuits/3.7v-to-5v-boost-converter-circuit-diagram">Boost Converter using MC34063</a>, where a 3.7V to 5V boost converter was designed. Here we see how to<strong> convert 12V to 5V</strong>. As we know that exact 5V batteries are not always available, and sometimes we need higher voltage and lower voltage at the same time to drive different parts of circuit, so we use higher voltage (12v) source as the main power source and step down this voltage to lower voltage (5v) wherever required. For this purpose, a <strong>Buck Converter Circuit</strong> is used in many electronics applications which drops the input voltage as per the load requirement.</p><script async="" src="./12V to 5V Buck Converter Circuit using MC34063_files/f.txt"></script>
+<!-- Link AD Right -->
+<ins class="adsbygoogle" style="display:inline-block;width:200px;height:90px" data-ad-client="ca-pub-4104019148699772" data-ad-slot="2712000246"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p class="rtejustify">There are lots of choices available in this segment; as seen in the previous tutorial, <strong>MC34063</strong> is one of those most popular switching regulators available in such segment. MC34063 can be configured in three mode, <strong>Buck, Boost,</strong> and <strong>Inverting</strong>. We will use the Buck configuration to convert the <strong>12V DC source to 5V DC with 1A </strong>output current capability. We have previously built simple&nbsp;<a href="https://circuitdigest.com/microcontroller-projects/arduino-dc-dc-buck-converter-circuit">Buck Converter circuit</a>&nbsp;using MOSFET; you can also check many more useful&nbsp;<a href="https://circuitdigest.com/power-electronics">power electronics circuits&nbsp;here</a>.</p>
+<p class="rtejustify">&nbsp;</p>
+<h3 class="rtejustify"><strong>IC MC34063</strong></h3>
+<p class="rtejustify"><strong>MC34063</strong> pinout diagram has been shown in the below image. On the left side the internal circuit of MC34063 is shown, and on the other side the pinout diagram is shown.</p>
+<p class="rtejustify"><img alt="ICMC34063 Pinout and internal diagram" src="./12V to 5V Buck Converter Circuit using MC34063_files/ICMC34063-Pinout-and-internal-diagram.png" style="height:261px; width:568px"></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>MC34063</strong> is a <strong>1</strong>.<strong>5A</strong> <strong>Step</strong> <strong>up</strong> or <strong>step</strong> <strong>down</strong> or <strong>inverting</strong> <strong>regulator</strong>, due to DC voltage conversion property, MC34063 is a DC-DC converter IC.</p>
+<p class="rtejustify">This IC provides following features in its 8 pin package-</p>
+<ol><li class="rtejustify">Temperature compensated reference</li>
+<li class="rtejustify">Current limit circuit</li>
+<li class="rtejustify">Controlled Duty cycle oscillator with an active high current driver output switch.</li>
+<li class="rtejustify">Accept 3.0V to 40V DC.</li>
+<li class="rtejustify">Can be operated at 100 KHz switching frequency with a 2% tolerance.</li>
+<li class="rtejustify">Very low Standby current</li>
+<li class="rtejustify">Adjustable output voltage</li>
+</ol><p class="rtejustify">Also, despite&nbsp;these features, it is widely available and it is much cost efficient than other ICs available in such segment.</p>
+<p class="rtejustify">In the previous tutorial, we designed <a href="https://circuitdigest.com/electronic-circuits/3.7v-to-5v-boost-converter-circuit-diagram">voltage step-up circuit using MC34063</a> to boost 3.7V Lithium battery voltage to 5.5V, in this tutorial we will design 12V to 5V Buck converter.</p><script async="" src="./12V to 5V Buck Converter Circuit using MC34063_files/f.txt"></script>
+<!-- Boombox_bottom -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-4104019148699772" data-ad-slot="2070962646"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p class="rtejustify">&nbsp;</p>
+<h3 class="rtejustify"><strong>Calculating the Components’ Values for Boost Converter</strong></h3>
+<p class="rtejustify">If we check the datasheet, we can see the complete formula chart is present to calculate the desired values required as per our requirement. Here is the formula sheet available inside the datasheet, and the step up circuit is also shown.</p>
+<p class="rtejustify"><span class="image-caption-container image-caption-container-none" style="display:inline-block;height:534px; width:650px"><img alt="IC MC34063 Design formulae Table" class="caption caption-processed" src="./12V to 5V Buck Converter Circuit using MC34063_files/ICMC34063-Design-formulae-Table.png" title="Design Formula Table"><span style="display:block;" class="image-caption">Design Formula Table</span></span></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify">Here is the&nbsp;<strong>schematic without those components value,</strong>&nbsp;which will be used additionally with the&nbsp;<strong>MC34063</strong>.</p>
+<p class="rtejustify"><img alt="12V to 5V Buck Converter Circuit Diagram using MC34063" src="./12V to 5V Buck Converter Circuit using MC34063_files/12V-to-5V-Buck-Converter-Circuit-Diagram-using-MC34063.png" style="height:302px; width:750px"></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify">We will calculate the values which are required for our design. We can make the calculations from the formulas provided in the datasheet or <strong>we can use the excel sheet provided by ON Semiconductor’s website.</strong></p>
+<p class="rtejustify">
+Here is the link of the excel sheet.</p>
+<p><a href="https://www.onsemi.com/pub/Collateral/MC34063%20DWS.XLS" rel="nofollow" target="_blank"><cite>https://www.onsemi.com/pub/Collateral/MC34063%20DWS.XLS</cite></a></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>Steps to calculate those components values-</strong></p>
+<p class="rtejustify"><strong>Step 1:</strong>- First, we need to select the Diode. We will choose widely available diode <strong>1N5819</strong>. As per the datasheet, at <strong>1A</strong> forward current the forward voltage of the diode will be <strong>0.60</strong> V.</p>
+<p class="rtejustify"><img alt="Forward Characteristics of 1N5819 diode" src="./12V to 5V Buck Converter Circuit using MC34063_files/Forward-Characteristics-of-1N5819-diode.png" style="height:402px; width:400px"></p>
+<p class="rtejustify"><strong>Step 2:</strong>- We first calculate inductor and switching current as it will be required for further calculation. Our Average Inductor current will be the peak inductor current. So, in our case Inductor current is:</p>
+<pre class="rtejustify"><strong>IL(avg) = 1A</strong></pre><p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>Step 3:</strong>- Now it is time for the ripple current of the inductor. A typical inductor use 20-40% of the Average output current. So, if we choose the inductor ripple current 30%, <strong>it will be 1A * 30% = 0.30A</strong></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>Step 4:</strong>- The Switching peak current will be <strong>IL(avg) + Iripple/2 = 1 + .30/2 =</strong> <strong>1.15A</strong></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>Step 5:</strong>- We will calculate the <strong>t<sub>ON</sub>/t<sub>OFF</sub></strong> using the formula below</p>
+<p class="rtejustify"><img alt="Calculating Ttotal" src="./12V to 5V Buck Converter Circuit using MC34063_files/Calculating-Ttotal.jpg" style="height:41px; width:150px"></p>
+<p class="rtejustify">For this, our Vout is 5V, and forward voltage of the diode (Vf) is 0.60V. Our minimum input Voltage Vin (min) is 12V and the saturation voltage is 1V (1V in the datasheet). By, putting this all together we get</p>
+<pre class="rtejustify"><strong>(5+0.60) / (12-1-5) = 0.93 </strong>
+So,  <strong>t<sub>ON</sub>/t<sub>OFF</sub></strong> = <strong>.93uS</strong></pre><p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>Step 6:</strong>- Now we will calculate the Ton + Toff time, as per the formula <strong>Ton + Toff = 1 / f</strong></p>
+<p class="rtejustify">We will select a lower switching frequency, 40Khz.</p>
+<pre class="rtejustify">So, <strong>Ton + Toff = 1 / 40Khz = 25us</strong></pre><p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>Step 7:</strong>- Now we will calculate the <strong>Toff</strong> time. As we calculated the <strong>Ton + Toff</strong> and <strong>Ton / Toff</strong> previously, the calculation will be easier now,</p>
+<p class="rtejustify"><img alt="Calculating Toff" src="./12V to 5V Buck Converter Circuit using MC34063_files/Calculating-Toff.png" style="height:101px; width:200px"></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>Step 8:</strong>- Now the next step is to calculate <strong>Ton</strong>,</p>
+<pre class="rtejustify"><strong>Ton = (Ton + Toff) – Toff = 25us – 12.95us = 12.05us </strong></pre><p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>Step 9:</strong>- We need to choose the timing Capacitor <strong>Ct</strong>, which will be required to produce the desired frequency.</p>
+<pre class="rtejustify"><strong>Ct = 4.0 x10<sup>-5</sup> x Ton = 4.0 x 10<sup>-5</sup>  x 12.05uS</strong> <strong>=</strong> <strong>482pF </strong>
+</pre><p class="rtejustify"><strong>Step 10:</strong>- Depending on those values we will calculate the Inductor value<br><img alt="Calculate the Inductor value" src="./12V to 5V Buck Converter Circuit using MC34063_files/Calculate-the-Inductor-value.png" style="height:95px; width:364px"></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>Step 11:</strong>- For the 1A current, The Rsc value will be 0.3/Ipk. So, for our requirement it will be <strong>Rsc = .3/1.15 = .260 Ohms</strong></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>Step 12:</strong>- Let’s calculate the output capacitor values, we can choose a ripple value of <strong>100mV (peak to peak)</strong> from the boost output.</p>
+<p class="rtejustify"><img alt="Calculating output capacitor value" src="./12V to 5V Buck Converter Circuit using MC34063_files/Calculating-output-capacitor-value_0.png" style="height:92px; width:282px"></p>
+<p class="rtejustify">We will choose <strong>470uF, 25V.</strong> The more capacitor will be used, the more ripple it will reduce.</p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>Step 13:</strong>- Last we need to calculate the voltage feedback resistors value. We will choose <strong>R1</strong> value <strong>2k</strong>, So, the R2 value will be calculated as</p>
+<pre class="rtejustify"><strong>Vout = 1.25 (1 + R2/R1) </strong>
+<strong>5 = 1.25 (1 + R2 / 2K) </strong>
+<strong>R2 =</strong> <strong>6.2k</strong></pre><p class="rtejustify">&nbsp;</p>
+<h3 class="rtejustify"><strong>Buck Converter Circuit Diagram</strong></h3>
+<p class="rtejustify">So after calculating all the values. Here is the updated schematic</p>
+<p class="rtejustify"><script async="" src="./12V to 5V Buck Converter Circuit using MC34063_files/f.txt"></script>
+<!-- Link_ad_Circuit -->
+<ins class="adsbygoogle" style="display:inline-block;width:200px;height:90px" data-ad-client="ca-pub-4104019148699772" data-ad-slot="1263995046"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script><a href="https://circuitdigest.com/fullimage?i=circuitdiagram/12V-to-5V-Buck-Converter-Circuit-Diagram-with-values.png" target="_blank"><img alt="12V to 5V Buck Converter Circuit Diagram with values" src="./12V to 5V Buck Converter Circuit using MC34063_files/12V-to-5V-Buck-Converter-Circuit-Diagram-with-values.png" style="height:302px; width:750px" title="12V to 5V Buck Converter Circuit Diagram with values"></a></p><script async="" src="./12V to 5V Buck Converter Circuit using MC34063_files/f.txt"></script>
+<!-- circuit_below -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4104019148699772" data-ad-slot="8163517282" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p class="rtejustify">&nbsp;</p>
+<h3 class="rtejustify"><strong>Required components</strong></h3>
+<ol><li class="rtejustify">2 nos relimate connector for input and output</li>
+<li class="rtejustify">2k resistor- 1 nos</li>
+<li class="rtejustify">6.2k resistor- 1 nos</li>
+<li class="rtejustify">1N5819- 1 nos</li>
+<li class="rtejustify">100uF, 25V and 359.37uF, 25V capacitor (470uF, 25V used, close value selected)- 1 nos each.</li>
+<li class="rtejustify">62.87uH inductor, 1.5A 1 nos. (100uH 2.5A is used, it was readily available in market)</li>
+<li class="rtejustify">482pF (470pF used) ceramic disc capacitor- 1 nos</li>
+<li class="rtejustify">12V Power Supply unit with 1.5A Rating.</li>
+<li class="rtejustify">MC34063 switching regulator ic</li>
+<li class="rtejustify">.26ohms resistor (.3R, 2W used)</li>
+<li class="rtejustify">1 nos veroboard (dotted or connected vero can be used).</li>
+<li class="rtejustify">Soldering Iron</li>
+<li class="rtejustify">Soldering Flux and Soldering wires.</li>
+<li class="rtejustify">Additional wires if required.</li>
+</ol><p class="rtejustify"><em>Note: We have used 100uh inductor as it is available easily with local vendors with the 2.5A current rating.&nbsp;</em>Also <em>we have used .3R resistor instead .26R.</em></p>
+<p class="rtejustify">After arranging the components, solder the components on Perf board</p>
+<p class="rtejustify"><img alt="12V to 5V Buck Converter Circuit Diagram Hardware" src="./12V to 5V Buck Converter Circuit using MC34063_files/12V-to-5V-Buck-Converter-Circuit-Diagram-Hardware.jpg" style="height:381px; width:750px"></p>
+<p class="rtejustify"><img alt="Soldered Components for 12V to 5V Buck Converter" src="./12V to 5V Buck Converter Circuit using MC34063_files/Soldered-Components-for-12V-to5V-Buck-Converter.jpg" style="height:575px; width:400px"></p>
+<p class="rtejustify">&nbsp;</p>
+<h3 class="rtejustify"><strong>Testing the Buck Converter Circuit</strong></h3>
+<p class="rtejustify">Before testing the circuit we need variable DC loads to draw the current from the DC power supply. In the small electronics lab where we are testing the circuit, test tolerances are much higher and due to that, few measurement accuracies are not up to the mark.</p>
+<p class="rtejustify">Oscilloscope is properly calibrated but artificial noises, EMI, RF can also change the test result accuracy. Also, the Multimeter have +/-1% tolerances.</p>
+<p class="rtejustify">Here we will measure the following things</p>
+<ol><li class="rtejustify">Output ripple and voltage at various loads up to 1000mA. Also, test the output voltage at this full load.</li>
+<li class="rtejustify">The efficiency of the circuit.</li>
+<li class="rtejustify">Idle current consumption of the circuit.</li>
+<li class="rtejustify">Short circuit condition of the circuit.</li>
+<li class="rtejustify">Also, what will happen if we overload the output?</li>
+</ol><p class="rtejustify">Our room temperature is <strong>26 degree Celsius</strong> when we tested the circuit.</p>
+<p class="rtejustify"><img alt="Testing the Buck Converter Circuit" src="./12V to 5V Buck Converter Circuit using MC34063_files/Testing-the-Buck-Converter-Circuit.jpg" style="height:615px; width:500px"></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify">In the <strong>above image, we can see the DC load</strong>. This is a resistive load and as we can see, ten no. of 1 ohm resistors in parallel connection are the actual load, which is connected across a MOS-FET, We will control the MOSFET gate and allow the current to flow through the resistors. Those resistors convert electrical powers to heat. The result consists of 5 % tolerance. Also, these load results include the power draw of the load itself, so when no load is being connected across it and powered using an external power supply, it will show default 70mA of load current. In our case, we will power the load from external bench power supply and test the circuit. The final output will be (Result – 70mA).</p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify"><strong>Below is our test setup</strong>; we have connected the load across the circuit, we measure the output current across the buck regulator as well as the output voltage of it. An oscilloscope is also connected across the buck converter, so we can also check the output voltage. We are providing <strong>12V</strong> input from our bench power supply unit.</p>
+<p class="rtejustify"><img alt="Testing the Buck Converter Circuit with 12V input" src="./12V to 5V Buck Converter Circuit using MC34063_files/Testing-the-Buck-Converter-Circuit-with-12V-input.jpg" style="height:501px; width:600px"></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify">We are drawing .<strong>88A</strong> or <strong>952mA-70mA = 882mA</strong> of current from the output. The output voltage is <strong>5.15V</strong>.</p>
+<p class="rtejustify">At this point, if we check the peak to peak ripple in the oscilloscope. We can see the output wave, the ripple is <strong>60mV (pk-pk). </strong>Which is good for a 12V to 5V Switching buck converter.</p>
+<p class="rtejustify"><img alt="Peak to Peak ripple on oscilloscope for Buck Converter" src="./12V to 5V Buck Converter Circuit using MC34063_files/Peak-to-Peak-ripple-on-oscilloscope-for-Buck-Converter.jpg" style="height:300px; width:400px"></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify">The <strong>output waveform</strong> looks like this:</p>
+<p class="rtejustify"><img alt="12V to 5V Buck Converter Circuit Output Waveform" src="./12V to 5V Buck Converter Circuit using MC34063_files/12V-to-5V-Buck-Converter-Circuit-Output-Waveform.jpg" style="height:300px; width:400px"></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify">Here is the <strong>time frame</strong> of the output waveform. It is <strong>500mV</strong> per division and <strong>500uS</strong> time frame.&nbsp;</p>
+<p class="rtejustify"><img alt="12V to 5V Buck Converter Circuit Output waveform with time frame" src="./12V to 5V Buck Converter Circuit using MC34063_files/12V-to-5V-Buck-Converter-Circuit-Output-waveform-with-time-frame.jpg" style="height:300px; width:400px"></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify">Here is the detailed test report</p>
+<table border="1" cellpadding="0" cellspacing="0" style="width:487px"><tbody><tr><td style="width:97px">
+<p class="rtejustify"><strong>Time<br>
+			(secs)</strong></p>
+</td>
+<td style="width:102px">
+<p class="rtejustify"><strong>Load (mA)</strong></p>
+</td>
+<td style="width:120px">
+<p class="rtejustify"><strong>Voltage (V)</strong></p>
+</td>
+<td style="width:168px">
+<p class="rtejustify"><strong>Ripple(p-p) (mV)</strong></p>
+</td>
+</tr><tr><td style="width:97px">
+<p class="rtejustify">180</p>
+</td>
+<td style="width:102px">
+<p class="rtejustify">0</p>
+</td>
+<td style="width:120px">
+<p class="rtejustify">5.17</p>
+</td>
+<td style="width:168px">
+<p class="rtejustify">60</p>
+</td>
+</tr><tr><td style="width:97px">
+<p class="rtejustify">180</p>
+</td>
+<td style="width:102px">
+<p class="rtejustify">200</p>
+</td>
+<td style="width:120px">
+<p class="rtejustify">5.16</p>
+</td>
+<td style="width:168px">
+<p class="rtejustify">60</p>
+</td>
+</tr><tr><td style="width:97px">
+<p class="rtejustify">180</p>
+</td>
+<td style="width:102px">
+<p class="rtejustify">400</p>
+</td>
+<td style="width:120px">
+<p class="rtejustify">5.16</p>
+</td>
+<td style="width:168px">
+<p class="rtejustify">60</p>
+</td>
+</tr><tr><td style="width:97px">
+<p class="rtejustify">180</p>
+</td>
+<td style="width:102px">
+<p class="rtejustify">600</p>
+</td>
+<td style="width:120px">
+<p class="rtejustify">5.16</p>
+</td>
+<td style="width:168px">
+<p class="rtejustify">80</p>
+</td>
+</tr><tr><td style="width:97px">
+<p class="rtejustify">180</p>
+</td>
+<td style="width:102px">
+<p class="rtejustify">800</p>
+</td>
+<td style="width:120px">
+<p class="rtejustify">5.15</p>
+</td>
+<td style="width:168px">
+<p class="rtejustify">80</p>
+</td>
+</tr><tr><td style="width:97px">
+<p class="rtejustify">180</p>
+</td>
+<td style="width:102px">
+<p class="rtejustify">982</p>
+</td>
+<td style="width:120px">
+<p class="rtejustify">5.13</p>
+</td>
+<td style="width:168px">
+<p class="rtejustify">80</p>
+</td>
+</tr><tr><td style="width:97px">
+<p class="rtejustify">180</p>
+</td>
+<td style="width:102px">
+<p class="rtejustify">1200</p>
+</td>
+<td style="width:120px">
+<p class="rtejustify">4.33</p>
+</td>
+<td style="width:168px">
+<p class="rtejustify">120</p>
+</td>
+</tr></tbody></table><p class="rtejustify">
+We changed the load and waited for approx 3 minutes, on each step, to check whether the results are stable or not. After <strong>982mA</strong> load the voltage dropped significantly. In other cases from 0 loads to the 940 mA, the output voltage dropped was approx .02V, which is quite good stability at full load. Also, after that <strong>982mA </strong>load, the output voltage is dropped significantly. We used .3R resistor where .26R was required, due to that, we can draw 982mA of load current. The <strong>MC34063</strong> power supply is unable to provide proper stability at full 1A load as we used .3R instead .26R. But 982mA is very close to 1A output. Also, we used resistors with 5% tolerances which are most commonly available at the local market.</p>
+<p class="rtejustify"><strong>We calculated the efficiency at 12V fixed input</strong> and by changing the load. Here is the result</p>
+<table border="1" cellpadding="0" cellspacing="0" style="width:614px"><tbody><tr><td style="height:47px; width:84px">
+<p class="rtejustify"><strong>Input Voltage (V)</strong></p>
+</td>
+<td style="height:47px; width:95px">
+<p class="rtejustify"><strong>Input Current (A)</strong></p>
+</td>
+<td style="height:47px; width:90px">
+<p class="rtejustify"><strong>Input<br>
+			Power (W)</strong></p>
+</td>
+<td style="height:47px; width:80px">
+<p class="rtejustify"><strong>Output<br>
+			Voltage (V)</strong></p>
+</td>
+<td style="height:47px; width:97px">
+<p class="rtejustify"><strong>Output<br>
+			Current (A)</strong></p>
+</td>
+<td style="height:47px; width:80px">
+<p class="rtejustify"><strong>Output Power (W)</strong></p>
+</td>
+<td style="height:47px; width:88px">
+<p class="rtejustify"><strong>&nbsp;Efficiency (n)</strong></p>
+</td>
+</tr><tr><td style="height:24px; width:84px">
+<p class="rtejustify">12.04</p>
+</td>
+<td style="height:24px; width:95px">
+<p class="rtejustify">0.12</p>
+</td>
+<td style="height:24px; width:90px">
+<p class="rtejustify">1.4448</p>
+</td>
+<td style="height:24px; width:80px">
+<p class="rtejustify">5.17</p>
+</td>
+<td style="height:24px; width:97px">
+<p class="rtejustify">0.2</p>
+</td>
+<td style="height:24px; width:80px">
+<p class="rtejustify">1.034</p>
+</td>
+<td style="height:24px; width:88px">
+<p class="rtejustify">71.56699889</p>
+</td>
+</tr><tr><td style="height:24px; width:84px">
+<p class="rtejustify">12.04</p>
+</td>
+<td style="height:24px; width:95px">
+<p class="rtejustify">0.23</p>
+</td>
+<td style="height:24px; width:90px">
+<p class="rtejustify">2.7692</p>
+</td>
+<td style="height:24px; width:80px">
+<p class="rtejustify">5.16</p>
+</td>
+<td style="height:24px; width:97px">
+<p class="rtejustify">0.4</p>
+</td>
+<td style="height:24px; width:80px">
+<p class="rtejustify">2.064</p>
+</td>
+<td style="height:24px; width:88px">
+<p class="rtejustify">74.53416149</p>
+</td>
+</tr><tr><td style="height:24px; width:84px">
+<p class="rtejustify">12.04</p>
+</td>
+<td style="height:24px; width:95px">
+<p class="rtejustify">0.34</p>
+</td>
+<td style="height:24px; width:90px">
+<p class="rtejustify">4.0936</p>
+</td>
+<td style="height:24px; width:80px">
+<p class="rtejustify">5.16</p>
+</td>
+<td style="height:24px; width:97px">
+<p class="rtejustify">0.6</p>
+</td>
+<td style="height:24px; width:80px">
+<p class="rtejustify">3.096</p>
+</td>
+<td style="height:24px; width:88px">
+<p class="rtejustify">75.6302521</p>
+</td>
+</tr><tr><td style="height:24px; width:84px">
+<p class="rtejustify">12.04</p>
+</td>
+<td style="height:24px; width:95px">
+<p class="rtejustify">0.45</p>
+</td>
+<td style="height:24px; width:90px">
+<p class="rtejustify">5.418</p>
+</td>
+<td style="height:24px; width:80px">
+<p class="rtejustify">5.16</p>
+</td>
+<td style="height:24px; width:97px">
+<p class="rtejustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.8</p>
+</td>
+<td style="height:24px; width:80px">
+<p class="rtejustify">4.128</p>
+</td>
+<td style="height:24px; width:88px">
+<p class="rtejustify">76.19047619</p>
+</td>
+</tr><tr><td style="height:24px; width:84px">
+<p class="rtejustify">12.04</p>
+</td>
+<td style="height:24px; width:95px">
+<p class="rtejustify">0.53</p>
+</td>
+<td style="height:24px; width:90px">
+<p class="rtejustify">6.3812</p>
+</td>
+<td style="height:24px; width:80px">
+<p class="rtejustify">5.15</p>
+</td>
+<td style="height:24px; width:97px">
+<p class="rtejustify">0.98</p>
+</td>
+<td style="height:24px; width:80px">
+<p class="rtejustify">5.047</p>
+</td>
+<td style="height:24px; width:88px">
+<p class="rtejustify">79.09170689</p>
+</td>
+</tr></tbody></table><p class="rtejustify"><img alt="12V to 5V Buck Converter Circuit efficiency graph" src="./12V to 5V Buck Converter Circuit using MC34063_files/12V-to-5V-Buck-Converter-Circuit-efficiency-graph.png" style="height:218px; width:400px"></p>
+<p class="rtejustify">&nbsp;</p>
+<p class="rtejustify">As we can see the average efficiency is around <strong>75%</strong>, which is a good output at this stage.</p>
+<p class="rtejustify">Idle current consumption of the circuit is recorded <strong>3.52mA</strong> when the load is<strong> 0.</strong></p>
+<p class="rtejustify">Also, we checked for the<strong> short-circuit</strong>, and we observe Normal in short circuit.</p>
+<p class="rtejustify">After the maximum output current threshold the output voltages getting significantly lower and after a certain time, it’s getting close to zero.</p>
+<p class="rtejustify">Improvements can be made in this circuit; we can use low ESR higher value capacitor to reduce the output ripple. Also, proper PCB designing is necessary.</p>
+</div>
+      </div>
+</div>
+<!--
+THIS FILE IS NOT USED AND IS HERE AS A STARTING POINT FOR CUSTOMIZATION ONLY.
+See http://api.drupal.org/api/function/theme_field/7 for details.
+After copying this file to your theme's folder and customizing it, remove this
+HTML comment.
+-->
+<div class="field field-name-field-ad-code field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><div style="margin-bottom:5px;"><script async="" src="./12V to 5V Buck Converter Circuit using MC34063_files/f.txt"></script>
+<!-- front_rightbar -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4104019148699772" data-ad-slot="9331923841" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+      </div>
+</div>
+<!--
+THIS FILE IS NOT USED AND IS HERE AS A STARTING POINT FOR CUSTOMIZATION ONLY.
+See http://api.drupal.org/api/function/theme_field/7 for details.
+After copying this file to your theme's folder and customizing it, remove this
+HTML comment.
+-->
+<div class="field field-name-field-video field-type-text-long field-label-above">
+    <!--removed colon, only change, copied from core field module-->
+    <div class="field-label">Video<!--:&nbsp;--></div>
+    <div class="field-items">
+          <div class="field-item even"><p><iframe allowfullscreen="" frameborder="0" height="315" src="./12V to 5V Buck Converter Circuit using MC34063_files/g-S0ZWPiJjE.html" width="560" class="ui-droppable"></iframe></p>
+</div>
+      </div>
+</div>
+ <!--?php// print render($content['comments']); ?-->
+				 
+				 <ul class="tags-widget clearfix">
+				 <!--<li class="trending">Tags</li>-->
+                 <span class="tagb">Tags</span>
+				     					<li><a href="https://circuitdigest.com/tags/power-electronics" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">power electronics</a></li>
+					 					<li><a href="https://circuitdigest.com/tags/buck-converter" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">buck converter</a></li>
+					 					<li><a href="https://circuitdigest.com/tags/voltage" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">voltage</a></li>
+					 					<li></li>
+					 					<li></li>
+					 					<li></li>
+					 					<li></li>
+					 					<li></li>
+					 					<li></li>
+					 					<li></li>
+					 					<li></li>
+					 				 </ul>
+				<!--
+THIS FILE IS NOT USED AND IS HERE AS A STARTING POINT FOR CUSTOMIZATION ONLY.
+See http://api.drupal.org/api/function/theme_field/7 for details.
+After copying this file to your theme's folder and customizing it, remove this
+HTML comment.
+-->
+<div class="field field-name-field-ad-code-bottom field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><div style="padding: 20px; border: 2px solid #dadada;">
+<script async="" src="./12V to 5V Buck Converter Circuit using MC34063_files/f.txt"></script>
+<!-- Matched_Content_Ads -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4104019148699772" data-ad-slot="8999715848" data-ad-format="autorelaxed"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+      </div>
+</div>
+            </div><!-- .post-content -->
+			
+
+  </div>
+</div>
+  </div>
+<!-- total 288 lines -->
+<!-- Begin Mailchimp Signup Form -->
+<link href="./12V to 5V Buck Converter Circuit using MC34063_files/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{border:2px solid #dadada; clear:left; font:14px Helvetica,Arial,sans-serif; margin-top: 20px; }
+</style>
+<div id="mc_embed_signup">
+<form action="https://circuitdigest.us19.list-manage.com/subscribe/post?u=7831027c963ad1778e5688a40&amp;id=ff5ac3f382" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
+    <div id="mc_embed_signup_scroll">
+	<h3 style="font-weight:500;margin: 10px 0; text-align: center;">Get Our Weekly Newsletter!</h3>
+<p style="text-align: center; margin-bottom:20px;">Subscribe below to receive most popular news, articles and DIY projects from Circuit Digest</p>
+<div class="mc-field-group" style="padding-bottom: 1.5%">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" aria-required="true" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+</div>
+<div class="mc-field-group" style="padding-bottom: 1.5%">
+	<label for="mce-FNAME">Name </label>
+	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+</div>
+<div class="mc-field-group" style="width: 250px; padding-bottom: 1.5%;">
+	<label for="mce-MMERGE2">Country </label>
+	<select name="MMERGE2" class="" id="mce-MMERGE2">
+	<option value="United States of America">United States of America</option>
+<option value="Aaland Islands">Aaland Islands</option>
+<option value="Afghanistan">Afghanistan</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antarctica">Antarctica</option>
+<option value="Antigua And Barbuda">Antigua And Barbuda</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Azerbaijan">Azerbaijan</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Bahrain">Bahrain</option>
+<option value="Bangladesh">Bangladesh</option>
+<option value="Barbados">Barbados</option>
+<option value="Belarus">Belarus</option>
+<option value="Belgium">Belgium</option>
+<option value="Belize">Belize</option>
+<option value="Benin">Benin</option>
+<option value="Bermuda">Bermuda</option>
+<option value="Bhutan">Bhutan</option>
+<option value="Bolivia">Bolivia</option>
+<option value="Bonaire, Saint Eustatius and Saba">Bonaire, Saint Eustatius and Saba</option>
+<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+<option value="Botswana">Botswana</option>
+<option value="Bouvet Island">Bouvet Island</option>
+<option value="Brazil">Brazil</option>
+<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+<option value="Brunei Darussalam">Brunei Darussalam</option>
+<option value="Bulgaria">Bulgaria</option>
+<option value="Burkina Faso">Burkina Faso</option>
+<option value="Burundi">Burundi</option>
+<option value="Cambodia">Cambodia</option>
+<option value="Cameroon">Cameroon</option>
+<option value="Canada">Canada</option>
+<option value="Cape Verde">Cape Verde</option>
+<option value="Cayman Islands">Cayman Islands</option>
+<option value="Central African Republic">Central African Republic</option>
+<option value="Chad">Chad</option>
+<option value="Chile">Chile</option>
+<option value="China">China</option>
+<option value="Christmas Island">Christmas Island</option>
+<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+<option value="Colombia">Colombia</option>
+<option value="Comoros">Comoros</option>
+<option value="Congo">Congo</option>
+<option value="Cook Islands">Cook Islands</option>
+<option value="Costa Rica">Costa Rica</option>
+<option value="Cote D&#39;Ivoire">Cote D'Ivoire</option>
+<option value="Croatia">Croatia</option>
+<option value="Cuba">Cuba</option>
+<option value="Curacao">Curacao</option>
+<option value="Cyprus">Cyprus</option>
+<option value="Czech Republic">Czech Republic</option>
+<option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
+<option value="Denmark">Denmark</option>
+<option value="Djibouti">Djibouti</option>
+<option value="Dominica">Dominica</option>
+<option value="Dominican Republic">Dominican Republic</option>
+<option value="Ecuador">Ecuador</option>
+<option value="Egypt">Egypt</option>
+<option value="El Salvador">El Salvador</option>
+<option value="Equatorial Guinea">Equatorial Guinea</option>
+<option value="Eritrea">Eritrea</option>
+<option value="Estonia">Estonia</option>
+<option value="Ethiopia">Ethiopia</option>
+<option value="Falkland Islands">Falkland Islands</option>
+<option value="Faroe Islands">Faroe Islands</option>
+<option value="Fiji">Fiji</option>
+<option value="Finland">Finland</option>
+<option value="France">France</option>
+<option value="French Guiana">French Guiana</option>
+<option value="French Polynesia">French Polynesia</option>
+<option value="French Southern Territories">French Southern Territories</option>
+<option value="Gabon">Gabon</option>
+<option value="Gambia">Gambia</option>
+<option value="Georgia">Georgia</option>
+<option value="Germany">Germany</option>
+<option value="Ghana">Ghana</option>
+<option value="Gibraltar">Gibraltar</option>
+<option value="Greece">Greece</option>
+<option value="Greenland">Greenland</option>
+<option value="Grenada">Grenada</option>
+<option value="Guadeloupe">Guadeloupe</option>
+<option value="Guam">Guam</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guernsey">Guernsey</option>
+<option value="Guinea">Guinea</option>
+<option value="Guinea-Bissau">Guinea-Bissau</option>
+<option value="Guyana">Guyana</option>
+<option value="Haiti">Haiti</option>
+<option value="Heard and Mc Donald Islands">Heard and Mc Donald Islands</option>
+<option value="Honduras">Honduras</option>
+<option value="Hong Kong">Hong Kong</option>
+<option value="Hungary">Hungary</option>
+<option value="Iceland">Iceland</option>
+<option value="India">India</option>
+<option value="Indonesia">Indonesia</option>
+<option value="Iran">Iran</option>
+<option value="Iraq">Iraq</option>
+<option value="Ireland">Ireland</option>
+<option value="Isle of Man">Isle of Man</option>
+<option value="Israel">Israel</option>
+<option value="Italy">Italy</option>
+<option value="Jamaica">Jamaica</option>
+<option value="Japan">Japan</option>
+<option value="Jersey  (Channel Islands)">Jersey  (Channel Islands)</option>
+<option value="Jordan">Jordan</option>
+<option value="Kazakhstan">Kazakhstan</option>
+<option value="Kenya">Kenya</option>
+<option value="Kiribati">Kiribati</option>
+<option value="Kuwait">Kuwait</option>
+<option value="Kyrgyzstan">Kyrgyzstan</option>
+<option value="Lao People&#39;s Democratic Republic">Lao People's Democratic Republic</option>
+<option value="Latvia">Latvia</option>
+<option value="Lebanon">Lebanon</option>
+<option value="Lesotho">Lesotho</option>
+<option value="Liberia">Liberia</option>
+<option value="Libya">Libya</option>
+<option value="Liechtenstein">Liechtenstein</option>
+<option value="Lithuania">Lithuania</option>
+<option value="Luxembourg">Luxembourg</option>
+<option value="Macau">Macau</option>
+<option value="Macedonia">Macedonia</option>
+<option value="Madagascar">Madagascar</option>
+<option value="Malawi">Malawi</option>
+<option value="Malaysia">Malaysia</option>
+<option value="Maldives">Maldives</option>
+<option value="Mali">Mali</option>
+<option value="Malta">Malta</option>
+<option value="Marshall Islands">Marshall Islands</option>
+<option value="Martinique">Martinique</option>
+<option value="Mauritania">Mauritania</option>
+<option value="Mauritius">Mauritius</option>
+<option value="Mayotte">Mayotte</option>
+<option value="Mexico">Mexico</option>
+<option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+<option value="Moldova, Republic of">Moldova, Republic of</option>
+<option value="Monaco">Monaco</option>
+<option value="Mongolia">Mongolia</option>
+<option value="Montenegro">Montenegro</option>
+<option value="Montserrat">Montserrat</option>
+<option value="Morocco">Morocco</option>
+<option value="Mozambique">Mozambique</option>
+<option value="Myanmar">Myanmar</option>
+<option value="Namibia">Namibia</option>
+<option value="Nauru">Nauru</option>
+<option value="Nepal">Nepal</option>
+<option value="Netherlands">Netherlands</option>
+<option value="Netherlands Antilles">Netherlands Antilles</option>
+<option value="New Caledonia">New Caledonia</option>
+<option value="New Zealand">New Zealand</option>
+<option value="Nicaragua">Nicaragua</option>
+<option value="Niger">Niger</option>
+<option value="Nigeria">Nigeria</option>
+<option value="Niue">Niue</option>
+<option value="Norfolk Island">Norfolk Island</option>
+<option value="North Korea">North Korea</option>
+<option value="Northern Mariana Islands">Northern Mariana Islands</option>
+<option value="Norway">Norway</option>
+<option value="Oman">Oman</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Palau">Palau</option>
+<option value="Palestine">Palestine</option>
+<option value="Panama">Panama</option>
+<option value="Papua New Guinea">Papua New Guinea</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Peru">Peru</option>
+<option value="Philippines">Philippines</option>
+<option value="Pitcairn">Pitcairn</option>
+<option value="Poland">Poland</option>
+<option value="Portugal">Portugal</option>
+<option value="Puerto Rico">Puerto Rico</option>
+<option value="Qatar">Qatar</option>
+<option value="Republic of Kosovo">Republic of Kosovo</option>
+<option value="Reunion">Reunion</option>
+<option value="Romania">Romania</option>
+<option value="Russia">Russia</option>
+<option value="Rwanda">Rwanda</option>
+<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+<option value="Saint Lucia">Saint Lucia</option>
+<option value="Saint Martin">Saint Martin</option>
+<option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+<option value="Samoa (Independent)">Samoa (Independent)</option>
+<option value="San Marino">San Marino</option>
+<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Senegal">Senegal</option>
+<option value="Serbia">Serbia</option>
+<option value="Seychelles">Seychelles</option>
+<option value="Sierra Leone">Sierra Leone</option>
+<option value="Singapore">Singapore</option>
+<option value="Sint Maarten">Sint Maarten</option>
+<option value="Slovakia">Slovakia</option>
+<option value="Slovenia">Slovenia</option>
+<option value="Solomon Islands">Solomon Islands</option>
+<option value="Somalia">Somalia</option>
+<option value="South Africa">South Africa</option>
+<option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+<option value="South Korea">South Korea</option>
+<option value="South Sudan">South Sudan</option>
+<option value="Spain">Spain</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="St. Helena">St. Helena</option>
+<option value="St. Pierre and Miquelon">St. Pierre and Miquelon</option>
+<option value="Sudan">Sudan</option>
+<option value="Suriname">Suriname</option>
+<option value="Svalbard and Jan Mayen Islands">Svalbard and Jan Mayen Islands</option>
+<option value="Swaziland">Swaziland</option>
+<option value="Sweden">Sweden</option>
+<option value="Switzerland">Switzerland</option>
+<option value="Syria">Syria</option>
+<option value="Taiwan">Taiwan</option>
+<option value="Tajikistan">Tajikistan</option>
+<option value="Tanzania">Tanzania</option>
+<option value="Thailand">Thailand</option>
+<option value="Timor-Leste">Timor-Leste</option>
+<option value="Togo">Togo</option>
+<option value="Tokelau">Tokelau</option>
+<option value="Tonga">Tonga</option>
+<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+<option value="Tunisia">Tunisia</option>
+<option value="Turkey">Turkey</option>
+<option value="Turkmenistan">Turkmenistan</option>
+<option value="Turks &amp; Caicos Islands">Turks &amp; Caicos Islands</option>
+<option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+<option value="Tuvalu">Tuvalu</option>
+<option value="Uganda">Uganda</option>
+<option value="Ukraine">Ukraine</option>
+<option value="United Arab Emirates">United Arab Emirates</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="Uruguay">Uruguay</option>
+<option value="USA Minor Outlying Islands">USA Minor Outlying Islands</option>
+<option value="Uzbekistan">Uzbekistan</option>
+<option value="Vanuatu">Vanuatu</option>
+<option value="Vatican City State (Holy See)">Vatican City State (Holy See)</option>
+<option value="Venezuela">Venezuela</option>
+<option value="Vietnam">Vietnam</option>
+<option value="Virgin Islands (British)">Virgin Islands (British)</option>
+<option value="Virgin Islands (U.S.)">Virgin Islands (U.S.)</option>
+<option value="Wallis and Futuna Islands">Wallis and Futuna Islands</option>
+<option value="Western Sahara">Western Sahara</option>
+<option value="Yemen">Yemen</option>
+<option value="Zambia">Zambia</option>
+<option value="Zimbabwe">Zimbabwe</option>
+
+	</select>
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7831027c963ad1778e5688a40_ff5ac3f382" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" src="./12V to 5V Buck Converter Circuit using MC34063_files/mc-validate.js.download"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='MMERGE2';ftypes[2]='dropdown';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->		              <footer class="post-meta">
+	    
+	 
+              <div class="tags-wrapper">
+                                </div><!-- .tags-wrapper -->
+
+              <!--<div class="share-wrapper clearfix">
+                <div class="total-shares">
+                  <em id="countUp" data-count="0">0</em>
+                  <div class="caption">Shares</div>
+                </div>
+
+                <div class="share-buttons">
+                <div class="sharethis-inline-share-buttons"></div>
+                </div>
+				</div>     -->                         
+             
+              <div class="row">
+                <div class="post-nav-wrapper clearfix">
+                  <div class="col-md-6 omega">
+                    <div class="previous-post">
+		                          <div class="post-nav-label">
+                        <i class="fa fa-angle-left"></i>
+                        Previous post
+                      </div>
+		                           <a href="https://circuitdigest.com/electronic-circuits/24v-flasher-circuit-diagram" class="post-nav-title">24V Flasher Circuit</a>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 alpha">
+                    <div class="next-post">
+		                            <div class="post-nav-label">
+                        Next post
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+		                            <a href="https://circuitdigest.com/electronic-circuits/solenoid-driver-circuit-diagram" class="post-nav-title">Solenoid Driver Circuit</a>
+                    </div>
+                  </div>
+                </div><!-- .post-nav-wrapper -->
+              </div>
+          <!-- <div class="author-box clearfix">
+	                  </div> -->
+            </footer>
+          </article><!-- .post-wrapper -->
+
+          <div class="related-posts clearfix">
+     </div><!-- .related-post -->          
+          <!-- Mid ad -->
+<!-- <div class="row">
+   <div class="col-md-12">
+     <div class="ad728-wrapper mid-wrapper">
+       <a href="#">
+         <img src="http://placehold.it/728x90" alt=""/>
+       </a> 
+     </div>
+   </div>
+</div> -->
+<!-- End Mid ad -->
+          <!-- Comment List -->
+<div id="comments" class="comments-wrapper clearfix">
+<h3 class="block-title"><span>Comments</span></h3>
+  <a id="comment-29126"></a>
+
+<ul class="comments" style="margin-bottom: 20px; list-style-type: none;">
+  <li>
+    <div class="comment">
+		  <div class="img-thumbnail" style="float:left;  overflow: hidden; border-radius: 50%; padding:0 !important; margin-right: 10px;">
+		      <div class="user-picture">
+    <a href="https://circuitdigest.com/users/opencorner" title="View user profile."><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/anon.png" alt="OpenCorner&#39;s picture" title="OpenCorner&#39;s picture"></a>	
+		 <span>
+    
+	     	 
+
+		
+    	 
+	</span>
+	
+  </div>
+		  </div>
+		  <div class="comment-block">  
+		    <div class="comment-arrow"></div>
+        <span class="comment-by">
+	        <strong><span rel="sioc:has_creator"><a href="https://circuitdigest.com/users/opencorner" title="View user profile." class="username" xml:lang="" about="/users/opencorner" typeof="sioc:UserAccount" property="foaf:name" datatype="">OpenCorner</a></span></strong><br> Oct 02, 2018	        <span class="pull-right">
+	          <ul class="links inline"><li class="comment_forbidden first last"><span><a href="https://circuitdigest.com/user/login?destination=node/2357%23comment-form">Log in</a> or <a href="https://circuitdigest.com/user/register?destination=node/2357%23comment-form">register</a> to post comments</span></li>
+</ul>	        </span>
+        </span>
+
+		    		    
+		    <div class="comment-content">
+		      <div class="row">
+		      <p>
+		      <span rel="sioc:reply_of" resource="/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram" class="rdf-meta element-hidden"></span><!--
+THIS FILE IS NOT USED AND IS HERE AS A STARTING POINT FOR CUSTOMIZATION ONLY.
+See http://api.drupal.org/api/function/theme_field/7 for details.
+After copying this file to your theme's folder and customizing it, remove this
+HTML comment.
+-->
+</p><div class="field field-name-comment-body field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>I have used the same components as mentioned in a document.<br>
+also, I gave 12V input voltage using DC 12V&nbsp;power adapter.</p>
+<p>But I got only 1.61V in output.<br>
+how to get perfect 5v in output?</p>
+<p>My circuit looks like this,<br><a href="https://drive.google.com/file/d/1fG5PJlFwTow24D0WmFrk8es-mU0FlV-T/view?usp=drivesdk">https://drive.google.com/file/d/1fG5PJlFwTow24D0WmFrk8es-mU0FlV-T/view?usp=drivesdk</a></p>
+<p><a href="https://drive.google.com/file/d/1UlppE80yU32wXc0tymRVHLDHPSpfRZxS/view?usp=drivesdk">https://drive.google.com/file/d/1UlppE80yU32wXc0tymRVHLDHPSpfRZxS/view?usp=drivesdk</a></p>
+<p>Actually, I need to place my 5V operated circuit in every vehicle. So I&nbsp;want to use the vehicle battery as a 12v power supply. That's&nbsp;why I needed 12v to 5v conversion circuit in between.</p>
+<p>Any help would be appreciated!!</p>
+<p>Thanks!!<br>
+&nbsp;</p>
+</div>
+      </div>
+</div>
+		      <p></p>
+		      </div>
+			  
+		      		    </div>
+		    <span class="date pull-right">
+		      		    </span>  
+      </div>
+    </div>
+  </li>
+</ul><a id="comment-29127"></a>
+
+<ul class="comments" style="margin-bottom: 20px; list-style-type: none;">
+  <li>
+    <div class="comment">
+		  <div class="img-thumbnail" style="float:left;  overflow: hidden; border-radius: 50%; padding:0 !important; margin-right: 10px;">
+		      <div class="user-picture">
+    <a href="https://circuitdigest.com/users/opencorner" title="View user profile."><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/anon.png" alt="OpenCorner&#39;s picture" title="OpenCorner&#39;s picture"></a>	
+		 <span>
+    
+	     	 
+
+		
+    	 
+	</span>
+	
+  </div>
+		  </div>
+		  <div class="comment-block">  
+		    <div class="comment-arrow"></div>
+        <span class="comment-by">
+	        <strong><span rel="sioc:has_creator"><a href="https://circuitdigest.com/users/opencorner" title="View user profile." class="username" xml:lang="" about="/users/opencorner" typeof="sioc:UserAccount" property="foaf:name" datatype="">OpenCorner</a></span></strong><br> Oct 02, 2018	        <span class="pull-right">
+	          <ul class="links inline"><li class="comment_forbidden first last"><span><a href="https://circuitdigest.com/user/login?destination=node/2357%23comment-form">Log in</a> or <a href="https://circuitdigest.com/user/register?destination=node/2357%23comment-form">register</a> to post comments</span></li>
+</ul>	        </span>
+        </span>
+
+		    		    
+		    <div class="comment-content">
+		      <div class="row">
+		      <p>
+		      <span rel="sioc:reply_of" resource="/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram" class="rdf-meta element-hidden"></span><!--
+THIS FILE IS NOT USED AND IS HERE AS A STARTING POINT FOR CUSTOMIZATION ONLY.
+See http://api.drupal.org/api/function/theme_field/7 for details.
+After copying this file to your theme's folder and customizing it, remove this
+HTML comment.
+-->
+</p><div class="field field-name-comment-body field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>
+<a href="https://drive.google.com/file/d/1fG5PJlFwTow24D0WmFrk8es-mU0FlV-T/view?usp=drivesdk">https://drive.google.com/file/d/1fG5PJlFwTow24D0WmFrk8es-mU0FlV-T/view?usp=drivesdk</a></p>
+<p><a href="https://drive.google.com/file/d/1UlppE80yU32wXc0tymRVHLDHPSpfRZxS/view?usp=drivesdk">https://drive.google.com/file/d/1UlppE80yU32wXc0tymRVHLDHPSpfRZxS/view?usp=drivesdk</a></p>
+<p>Actually, I need to place my 5V operated circuit in every vehicle. So I&nbsp;want to use the vehicle battery as a&nbsp;12v&nbsp;power supply. That's&nbsp;why I needed&nbsp;12v&nbsp;to 5v conversion circuit in between.</p>
+<p>Any help would be appreciated!!</p>
+<p>Thanks!!</p>
+</div>
+      </div>
+</div>
+		      <p></p>
+		      </div>
+			  
+		      		    </div>
+		    <span class="date pull-right">
+		      		    </span>  
+      </div>
+    </div>
+  </li>
+</ul>
+<div class="indented"><a id="comment-29185"></a>
+
+<ul class="comments" style="margin-bottom: 20px; list-style-type: none;">
+  <li>
+    <div class="comment">
+		  <div class="img-thumbnail" style="float:left;  overflow: hidden; border-radius: 50%; padding:0 !important; margin-right: 10px;">
+		      <div class="user-picture">
+    <a href="https://circuitdigest.com/users/aswinth-raj" title="View user profile."><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/picture-1759-1539150670.png" width="100" height="100" alt="Aswinth Raj&#39;s picture" title="Aswinth Raj&#39;s picture"></a>	
+		 <span>
+    
+	     	 
+
+		
+    	 
+	</span>
+	
+  </div>
+		  </div>
+		  <div class="comment-block">  
+		    <div class="comment-arrow"></div>
+        <span class="comment-by">
+	        <strong><span rel="sioc:has_creator"><a href="https://circuitdigest.com/users/aswinth-raj" title="View user profile." class="username" xml:lang="" about="/users/aswinth-raj" typeof="sioc:UserAccount" property="foaf:name" datatype="">Aswinth Raj</a></span></strong><br> Oct 09, 2018	        <span class="pull-right">
+	          <ul class="links inline"><li class="comment_forbidden first last"><span><a href="https://circuitdigest.com/user/login?destination=node/2357%23comment-form">Log in</a> or <a href="https://circuitdigest.com/user/register?destination=node/2357%23comment-form">register</a> to post comments</span></li>
+</ul>	        </span>
+        </span>
+
+		    		    
+		    <div class="comment-content">
+		      <div class="row">
+		      <p>
+		      <span rel="sioc:reply_of" resource="/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/29127#comment-29127" class="rdf-meta element-hidden"></span><!--
+THIS FILE IS NOT USED AND IS HERE AS A STARTING POINT FOR CUSTOMIZATION ONLY.
+See http://api.drupal.org/api/function/theme_field/7 for details.
+After copying this file to your theme's folder and customizing it, remove this
+HTML comment.
+-->
+</p><div class="field field-name-comment-body field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>Why do you need a buck converter? What is you power consumption if it is very low like less than one amp you can directly use a regulator IC like 7805</p>
+</div>
+      </div>
+</div>
+		      <p></p>
+		      </div>
+			  
+		      		    </div>
+		    <span class="date pull-right">
+		      		    </span>  
+      </div>
+    </div>
+  </li>
+</ul></div>  <!-- Comment form -->
+  <div id="respond" class="comment-form clearfix">
+        <h3 class="comment-title"><a href="https://circuitdigest.com/user/login?destination=node/2357%23comment-form">Log in</a> or <a href="https://circuitdigest.com/user/register?destination=node/2357%23comment-form">register</a> to post Comment</h3>	  </div><!-- #respond comments -->
+</div>
+
+		
+</div><!-- End Left big column -->
+
+        <!-- <div class="col-md-4" data-stickycolumn> --><!-- data-stickycolumn make the rightside baar sticky -->
+				<div class="col-md-4">
+  <aside class="sidebar clearfix">
+	
+    <div class="widget adwidget" style="padding: 0px; border:none; margin-bottom: 20px;">
+      <div class="region region-sidebar-right-ads">
+    <div id="block-block-6" class="block block-block ajaxblocks-loaded">
+
+    
+  <div class="content"><center><div id="skyscraper_2">
+			 
+            <!-- /21034905/skyscraper_ad -->
+<div id="div-gpt-ad-1490853271798-1" style="height:600px; width:160px;">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1490853271798-1'); });
+</script>
+</div>
+		</div></center></div>
+</div>
+<div id="block-block-16" class="block block-block">
+
+    
+  <div class="content">
+    <!--<div style="padding: 20px; border: 2px solid #dadada;">-->
+<div>
+<!-- /21034905/boombox_bottom -->
+<div id="div-gpt-ad-1533626231783-0" style="height:250px; width:300px; margin-left: auto; margin-right: auto;">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533626231783-0'); });
+</script>
+</div>
+</div>
+
+
+  </div>
+</div>
+<div id="block-views-front-left-and-right-block-3" class="block block-views yellow-color">
+
+    <h2></h2><h3 class="block-title"><span>Latest Posts</span></h3>
+  
+  <div class="content">
+    <div class="view view-front-left-and-right view-id-front_left_and_right view-display-id-block_3 view-dom-id-2a63bf708614767351063c4fc396b4ce">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="post-block">
+        <div class="post-image">
+               <a href="https://circuitdigest.com/electronic-circuits/missing-pulse-detector-circuit-diagram"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/Missing-Pulse-Detector-Circuit_0.jpg" width="480" height="250" alt="Missing Pulse Detector Circuit" title="Missing Pulse Detector Circuit"></a>
+         </div>
+         <div class="post-content">
+                 <div class="post-meta-wrap">
+                        <div class="post-title"><a href="https://circuitdigest.com/electronic-circuits/missing-pulse-detector-circuit-diagram">Missing Pulse Detector Circuit</a></div>
+                       
+                 </div>
+    
+          </div>
+</div></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="post-block">
+        <div class="post-image">
+               <a href="https://circuitdigest.com/news/vicor-introduces-four-new-dc-dc-converter-chip-modules"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/vicor-dc-dc-converter.jpg" width="480" height="250" alt="Vicor introduces four new DC-DC converter ChiP modules" title="Vicor introduces four new DC-DC converter ChiP modules"></a>
+         </div>
+         <div class="post-content">
+                 <div class="post-meta-wrap">
+                        <div class="post-title"><a href="https://circuitdigest.com/news/vicor-introduces-four-new-dc-dc-converter-chip-modules">Vicor introduces four new DC-DC converter ChiP modules</a></div>
+                       
+                 </div>
+    
+          </div>
+</div></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="post-block">
+        <div class="post-image">
+               <a href="https://circuitdigest.com/microcontroller-projects/arduino-xbee-module-interfacing-tutorial"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/XBee-Module-Interfacing-with-Arduino.jpg" width="480" height="250" alt="XBee Module Interfacing with Arduino" title="XBee Module Interfacing with Arduino"></a>
+         </div>
+         <div class="post-content">
+                 <div class="post-meta-wrap">
+                        <div class="post-title"><a href="https://circuitdigest.com/microcontroller-projects/arduino-xbee-module-interfacing-tutorial">XBee Module Interfacing with Arduino</a></div>
+                       
+                 </div>
+    
+          </div>
+</div></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+<div id="block-views-front-left-and-right-block-4" class="block block-views yellow-color">
+
+    
+  <div class="content">
+    <div class="view view-front-left-and-right view-id-front_left_and_right view-display-id-block_4 view-dom-id-27cf1b62a71499d952c2beb45c306978">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="post-block">
+        <div class="post-image">
+               <a href="https://circuitdigest.com/news/rsl10-sensor-development-kit-for-power-optimized-iot-applications"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/RSL10-sensor-development-kit.jpg" width="480" height="250" alt="RSL10 Sensor Development Kit for Power-Optimized IoT Applications" title="RSL10 Sensor Development Kit for Power-Optimized IoT Applications"></a>
+         </div>
+         <div class="post-content">
+                 <div class="post-meta-wrap">
+                        <div class="post-title"><a href="https://circuitdigest.com/news/rsl10-sensor-development-kit-for-power-optimized-iot-applications">RSL10 Sensor Development Kit for Power-Optimized IoT Applications</a></div>
+                       
+                 </div>
+    
+          </div>
+</div></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="post-block">
+        <div class="post-image">
+               <a href="https://circuitdigest.com/microcontroller-projects/how-to-program-avr-microcontroller-atmega16-with-usbasp-programmer-using-atmel-studio"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/How-to-Program-AVR-Microcontroller-Atmega16-Using-USBASP-Programmer-and-Atmel-Studio7.jpg" width="480" height="250" alt="How to program AVR Microcontroller Atmega16 Using USBASP programmer and Atmel Studio 7.0" title="How to program AVR Microcontroller Atmega16 Using USBASP programmer and Atmel Studio 7.0"></a>
+         </div>
+         <div class="post-content">
+                 <div class="post-meta-wrap">
+                        <div class="post-title"><a href="https://circuitdigest.com/microcontroller-projects/how-to-program-avr-microcontroller-atmega16-with-usbasp-programmer-using-atmel-studio">How to Program AVR Microcontroller Atmega16 Using USBASP programmer and Atmel Studio 7.0</a></div>
+                       
+                 </div>
+    
+          </div>
+</div></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="post-block">
+        <div class="post-image">
+               <a href="https://circuitdigest.com/news/motion-sensor-with-machine-learning-core-for-high-accuracy-battery-friendly-activity-tracking"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/LSM6DSOX-motion-sensor.jpg" width="480" height="250" alt="LSM6DSOX Motion Sensor with Machine Learning Core " title="LSM6DSOX Motion Sensor with Machine Learning Core "></a>
+         </div>
+         <div class="post-content">
+                 <div class="post-meta-wrap">
+                        <div class="post-title"><a href="https://circuitdigest.com/news/motion-sensor-with-machine-learning-core-for-high-accuracy-battery-friendly-activity-tracking">Motion Sensor with Machine Learning Core for High-Accuracy, Battery-Friendly Activity Tracking</a></div>
+                       
+                 </div>
+    
+          </div>
+</div></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </div>
+	
+    </div>
+	
+	<!-- right side bar search -->
+    <!--<div class="widget searchwidget">
+      <form class="searchwidget-form">
+        <div class="input-group">
+          <input type="text" class="form-control" id="search1" placeholder="Search...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button"><i class="fa fa-search" onclick="location.href='/circuitdigest/search/node/'+ document.getElementById('search1').value;"></i></button>
+          </span>
+        </div>
+      </form>
+    </div> -->
+    <div class="widget tabwidget">
+       <div class="region region-sidebar-tabwidget">
+    <div id="block-block-30" class="block block-block">
+
+    
+  <div class="content">
+    <ul class="nav nav-tabs" role="tablist" id="widget-tab">
+        <li role="presentation" class="active"><a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#tab-popular" aria-controls="tab-popular" role="tab" data-toggle="tab">News</a></li>
+        <li role="presentation"><a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#tab-recent" aria-controls="tab-recent" role="tab" data-toggle="tab">Articles</a></li>
+        <li role="presentation"><a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#tab-comments" aria-controls="tab-comments" role="tab" data-toggle="tab">Projects</a></li>
+      </ul>  </div>
+</div>
+  </div>
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active animated fadeIn" id="tab-popular">
+	  <div class="region region-sidebar-tab-popular">
+    <div id="block-views-front-left-and-right-block-6" class="block block-views">
+
+    
+  <div class="content">
+    <div class="view view-front-left-and-right view-id-front_left_and_right view-display-id-block_6 view-dom-id-9dec955892913ef2f0c213e42e722e17">
+        
+  
+  
+      <div class="view-content">
+      	   <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+                </a><a href="https://circuitdigest.com/news/vicor-introduces-four-new-dc-dc-converter-chip-modules"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/vicor-dc-dc-converter(1).jpg" width="275" height="160" alt="Vicor introduces four new DC-DC converter ChiP modules" title="Vicor introduces four new DC-DC converter ChiP modules"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/news/vicor-introduces-four-new-dc-dc-converter-chip-modules">Vicor introduces four new DC-DC converter ChiP modules</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+	   <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+                </a><a href="https://circuitdigest.com/news/rsl10-sensor-development-kit-for-power-optimized-iot-applications"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/RSL10-sensor-development-kit(1).jpg" width="275" height="160" alt="RSL10 Sensor Development Kit for Power-Optimized IoT Applications" title="RSL10 Sensor Development Kit for Power-Optimized IoT Applications"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/news/rsl10-sensor-development-kit-for-power-optimized-iot-applications">RSL10 Sensor Development Kit for Power-Optimized IoT Applications</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+	   <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+                </a><a href="https://circuitdigest.com/news/motion-sensor-with-machine-learning-core-for-high-accuracy-battery-friendly-activity-tracking"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/LSM6DSOX-motion-sensor(1).jpg" width="275" height="160" alt="LSM6DSOX Motion Sensor with Machine Learning Core " title="LSM6DSOX Motion Sensor with Machine Learning Core "></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/news/motion-sensor-with-machine-learning-core-for-high-accuracy-battery-friendly-activity-tracking">Motion Sensor with Machine Learning Core for High-Accuracy, Battery-Friendly Activity Tracking</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+	   <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+                </a><a href="https://circuitdigest.com/news/pcie-ethernet-bridges-using-low-power-sub-states-enable-power-savings-for-embedded-and-automotive-platforms"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/PCIe-ethernet Bridges.jpg" width="275" height="160" alt="PCIe 3.1 Ethernet Bridges Using Low-Power Sub-States Enable Power Savings for Embedded and Automotive Platforms" title="PCIe 3.1 Ethernet Bridges Using Low-Power Sub-States Enable Power Savings for Embedded and Automotive Platforms"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/news/pcie-ethernet-bridges-using-low-power-sub-states-enable-power-savings-for-embedded-and-automotive-platforms">PCIe 3.1 Ethernet Bridges Using Low-Power Sub-States Enable Power Savings for Embedded and Automotive Platforms</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+	   <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+                </a><a href="https://circuitdigest.com/news/wsbs-power-metal-strip-battery-shunt-resistors-in-5216-size"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/WSBS5216-shunt-resistors.jpg" width="275" height="160" alt="WSBS Power Metal Strip® Battery Shunt Resistors in 5216 Size Increase Accuracy, Lower Costs, and Provide Improved Corrosion Protection" title="WSBS Power Metal Strip® Battery Shunt Resistors in 5216 Size Increase Accuracy, Lower Costs, and Provide Improved Corrosion Protection"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/news/wsbs-power-metal-strip-battery-shunt-resistors-in-5216-size">WSBS Power Metal Strip® Battery Shunt Resistors in 5216 Size Increase Accuracy, Lower Costs, and Provide Improved Corrosion Protection</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </div>
+
+        </div><!-- Popular posts -->
+        <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-recent">
+
+            <div class="region region-sidebar-tab-recent">
+    <div id="block-views-front-left-and-right-block-5" class="block block-views red-color">
+
+    
+  <div class="content">
+    <div class="view view-front-left-and-right view-id-front_left_and_right view-display-id-block_5 post-style-list small view-dom-id-04a2ebc811f95056e508350ae4a05334">
+        
+  
+  
+      <div class="view-content">
+      	  <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+               </a><a href="https://circuitdigest.com/tutorial/harmonic-filter-circuit-how-to-remove-harmonics-using-active-and-passive-harmonic-filters"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/Harmonic-Filter-Circuit.jpg" width="275" height="160" alt="Harmonic Filter Circuit: How to remove Harmonics using Active and Passive Harmonic Filters" title="Harmonic Filter Circuit: How to remove Harmonics using Active and Passive Harmonic Filters"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/tutorial/harmonic-filter-circuit-how-to-remove-harmonics-using-active-and-passive-harmonic-filters">Harmonic Filter Circuit: How to remove Harmonics using Active and Passive Harmonic Filters</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+	  <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+               </a><a href="https://circuitdigest.com/tutorial/what-is-diac-construction-working-and-applications-in-triggering-the-triac"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/What-is-DIAC.png" width="275" height="160" alt="What is DIAC: Construction, Working and Application in Triggering the TRIAC" title="What is DIAC: Construction, Working and Application in Triggering the TRIAC"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/tutorial/what-is-diac-construction-working-and-applications-in-triggering-the-triac">What is DIAC: Construction, Working and Application in Triggering the TRIAC</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+	  <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+               </a><a href="https://circuitdigest.com/tutorial/image-manipulation-in-python-opencv-part2"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/Image-Manipulation-In-OpenCV.png" width="275" height="160" alt="Image Manipulations in OpenCV" title="Image Manipulations in OpenCV (Part-2)"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/tutorial/image-manipulation-in-python-opencv-part2">Image Manipulations in OpenCV (Part-2)</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+	  <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+               </a><a href="https://circuitdigest.com/tutorial/what-is-vfd-drive-circuit-types-working-advantage-disadvantages"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/What-is-VFD-Drive-Circuit-and-How-it-Works.jpg" width="275" height="160" alt="What is VFD Drive Circuit and How it Works" title="What is VFD Drive Circuit and How it Works"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/tutorial/what-is-vfd-drive-circuit-types-working-advantage-disadvantages">What is VFD Drive Circuit: Its Operation, Types and Applications</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+	  <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+               </a><a href="https://circuitdigest.com/tutorial/what-is-jfet-basics-construction-working-and-biasing"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/JFET-Construction-Working-and-Biasing.png" width="275" height="160" alt="JFET Construction, Working and Biasing" title="JFET Construction, Working and Biasing"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/tutorial/what-is-jfet-basics-construction-working-and-biasing">What is JFET: Its Construction, Working and Biasing Techniques</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </div>
+          
+        </div><!-- Recent Posts -->
+
+        <div role="tabpanel" class="tab-pane animated fadeIn" id="tab-comments">
+	<div class="widget-post clearfix">  
+              <div class="region region-sidebar-tab-comments">
+    <div id="block-views-front-left-and-right-block-7" class="block block-views">
+
+    
+  <div class="content">
+    <div class="view view-front-left-and-right view-id-front_left_and_right view-display-id-block_7 view-dom-id-d4a97972cfdd2229fce72ee5890aa06f">
+        
+  
+  
+      <div class="view-content">
+      	   <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+                </a><a href="https://circuitdigest.com/electronic-circuits/missing-pulse-detector-circuit-diagram"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/Missing-Pulse-Detector-Circuit_0(1).jpg" width="275" height="160" alt="Missing Pulse Detector Circuit" title="Missing Pulse Detector Circuit"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/electronic-circuits/missing-pulse-detector-circuit-diagram">Missing Pulse Detector Circuit</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+	   <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+                </a><a href="https://circuitdigest.com/microcontroller-projects/arduino-xbee-module-interfacing-tutorial"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/XBee-Module-Interfacing-with-Arduino(1).jpg" width="275" height="160" alt="XBee Module Interfacing with Arduino" title="XBee Module Interfacing with Arduino"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/microcontroller-projects/arduino-xbee-module-interfacing-tutorial">XBee Module Interfacing with Arduino</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+	   <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+                </a><a href="https://circuitdigest.com/microcontroller-projects/how-to-program-avr-microcontroller-atmega16-with-usbasp-programmer-using-atmel-studio"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/How-to-Program-AVR-Microcontroller-Atmega16-Using-USBASP-Programmer-and-Atmel-Studio7(1).jpg" width="275" height="160" alt="How to program AVR Microcontroller Atmega16 Using USBASP programmer and Atmel Studio 7.0" title="How to program AVR Microcontroller Atmega16 Using USBASP programmer and Atmel Studio 7.0"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/microcontroller-projects/how-to-program-avr-microcontroller-atmega16-with-usbasp-programmer-using-atmel-studio">How to Program AVR Microcontroller Atmega16 Using USBASP programmer and Atmel Studio 7.0</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+	   <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+                </a><a href="https://circuitdigest.com/microcontroller-projects/arduino-interrupt-tutorial-with-examples"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/Arduino-Interrupts-Tutorial.jpg" width="275" height="160" alt="Arduino Interrupts Tutorial" title="Arduino Interrupts Tutorial"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/microcontroller-projects/arduino-interrupt-tutorial-with-examples">Arduino Interrupts Tutorial</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+	   <article class="widget-post clearfix">  
+            <div class="simple-thumb">
+              <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#">
+                </a><a href="https://circuitdigest.com/microcontroller-projects/interfacing-servo-motor-with-atmega16-avr-microcontroller"><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/Interfacing-Servo-Motor-with-AVR-Microcontroller-Atmega16.jpg" width="275" height="160" alt="Interfacing Servo Motor with AVR Microcontroller Atmega16" title="Interfacing Servo Motor with AVR Microcontroller Atmega16"></a>              
+            </div>
+            <header>
+              <h3>
+                <a href="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram#"></a><a href="https://circuitdigest.com/microcontroller-projects/interfacing-servo-motor-with-atmega16-avr-microcontroller">Interfacing Servo Motor with AVR Microcontroller Atmega16</a>
+              </h3>
+<!--              <p class="simple-share">
+                <span><i class="fa fa-clock-o"></i> </span>
+              </p>-->
+            </header>
+          </article>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </div>
+	    </div>
+        </div><!-- Comments -->
+      </div>
+    </div>
+<!-- removed widget tagwidget, widget reviewwidget, widget categorywidget -->
+	
+	
+		<div class="widget subscribewidget">
+	  <div class="region region-sidebar-categorywidget">
+    <div id="block-views-all-forum-topics-block-1" class="block block-views">
+
+    <h2></h2><h3 class="block-title"><span>Active Forum Topics</span></h3>
+  
+  <div class="content">
+    <div class="view view-all-forum-topics view-id-all_forum_topics view-display-id-block_1 view-dom-id-a44f8570d5c1bbf18dcf2f7c86785eab">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://circuitdigest.com/forums/analog-electronics/preamp-ground-loop-problem" title="[teaser]" class="topic-title">Preamp Ground Loop Problem</a></span>  </div>  
+  <div class="views-field views-field-name-1">        <span class="field-content">  <div class="user-picture">
+    <a href="https://circuitdigest.com/users/vipul-kumar" title="View user profile."><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/anon.png" alt="Vipul Kumar&#39;s picture" title="Vipul Kumar&#39;s picture"></a>	
+		 <span>
+    
+	     	 
+
+		
+    	 
+	</span>
+	
+  </div>
+ <a href="https://circuitdigest.com/users/vipul-kumar" title="View user profile." class="username" xml:lang="" about="/users/vipul-kumar" typeof="sioc:UserAccount" property="foaf:name" datatype="">Vipul Kumar</a>  <span class="pull-right">Replies: 3</span></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://circuitdigest.com/forums/circuit-and-pcb-design/pcb-board-not-difficult-do-doing-good-pcb-board-not-easy" title="[teaser]" class="topic-title">A PCB board is not difficult to do, but doing a good PCB board is not easy</a></span>  </div>  
+  <div class="views-field views-field-name-1">        <span class="field-content">  <div class="user-picture">
+    <a href="https://circuitdigest.com/users/beanzheng" title="View user profile."><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/picture-7539-1542330700.jpg" width="100" height="100" alt="bean.zheng&#39;s picture" title="bean.zheng&#39;s picture"></a>	
+		 <span>
+    
+	     	 
+
+		
+    	 
+	</span>
+	
+  </div>
+ <a href="https://circuitdigest.com/users/beanzheng" title="View user profile." class="username" xml:lang="" about="/users/beanzheng" typeof="sioc:UserAccount" property="foaf:name" datatype="">bean.zheng</a>  <span class="pull-right">Replies: 3</span></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://circuitdigest.com/forums/digital-electronics/ds18b20-pic16f18426" title="[teaser]" class="topic-title">DS18b20 with PIC16f18426</a></span>  </div>  
+  <div class="views-field views-field-name-1">        <span class="field-content">  <div class="user-picture">
+    <a href="https://circuitdigest.com/users/carl-arellano" title="View user profile."><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/anon.png" alt="Carl Arellano&#39;s picture" title="Carl Arellano&#39;s picture"></a>	
+		 <span>
+    
+	     	 
+
+		
+    	 
+	</span>
+	
+  </div>
+ <a href="https://circuitdigest.com/users/carl-arellano" title="View user profile." class="username" xml:lang="" about="/users/carl-arellano" typeof="sioc:UserAccount" property="foaf:name" datatype="">Carl Arellano</a>  <span class="pull-right">Replies: 3</span></span>  </div></li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://circuitdigest.com/forums/digital-electronics/ds18b20-pic-microcontroller" title="[teaser]" class="topic-title">DS18b20 with PIC microcontroller</a></span>  </div>  
+  <div class="views-field views-field-name-1">        <span class="field-content">  <div class="user-picture">
+    <a href="https://circuitdigest.com/users/carl-arellano" title="View user profile."><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/anon.png" alt="Carl Arellano&#39;s picture" title="Carl Arellano&#39;s picture"></a>	
+		 <span>
+    
+	     	 
+
+		
+    	 
+	</span>
+	
+  </div>
+ <a href="https://circuitdigest.com/users/carl-arellano" title="View user profile." class="username" xml:lang="" about="/users/carl-arellano" typeof="sioc:UserAccount" property="foaf:name" datatype="">Carl Arellano</a>  <span class="pull-right">Replies: 2</span></span>  </div></li>
+          <li class="views-row views-row-5 views-row-odd views-row-last">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="https://circuitdigest.com/forums/power-electronics/strange-disharmonicas" title="[teaser]" class="topic-title">Strange disharmonicas</a></span>  </div>  
+  <div class="views-field views-field-name-1">        <span class="field-content">  <div class="user-picture">
+    <a href="https://circuitdigest.com/users/new-standard" title="View user profile."><img typeof="foaf:Image" src="./12V to 5V Buck Converter Circuit using MC34063_files/anon.png" alt="New Standard&#39;s picture" title="New Standard&#39;s picture"></a>	
+		 <span>
+    
+	     	 
+
+		
+    	 
+	</span>
+	
+  </div>
+ <a href="https://circuitdigest.com/users/new-standard" title="View user profile." class="username" xml:lang="" about="/users/new-standard" typeof="sioc:UserAccount" property="foaf:name" datatype="">New Standard</a>  <span class="pull-right">Replies: 2</span></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div class="forum-node-create-links forum-node-create-links-top"><div class="forum-add-node forum-add-forum"><a href="https://circuitdigest.com/user/login?destination=node/add/forum" class="af-button-large"><span style="font-size:16px; font-weight:bold;">Log in to post questions</span></a></div></div><br>    </div>
+  
+  
+</div>  </div>
+</div>
+<div id="block-user-login" class="block block-user">
+
+    <h2>User login</h2>
+  
+  <div class="content">
+    <form action="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram?destination=node/2357" method="post" id="user-login-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-name">
+  <label for="edit-name">E-mail or username <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAbNJREFUWAntV8FqwkAQnaymUkpChB7tKSfxWCie/Yb+gbdeCqGf0YsQ+hU95QNyDoWCF/HkqdeiIaEUqyZ1ArvodrOHxanQOiCzO28y781skKwFW3scPV1/febP69XqarNeNTB2KGs07U3Ttt/Ozp3bh/u7V7muheQf6ftLUWyYDB5yz1ijuPAub2QRDDunJsdGkAO55KYYjl0OUu1VXOzQZ64Tr+IiPXedGI79bQHdbheCIAD0dUY6gV6vB67rAvo6IxVgWVbFy71KBKkAFaEc2xPQarXA931ot9tyHphiPwpJgSbfe54Hw+EQHMfZ/msVEEURjMfjCjbFeG2dFxPo9/sVOSYzxmAwGIjnTDFRQLMQAjQ5pJAQkCQJ5HlekeERxHEsiE0xUUCzEO9AmqYQhiF0Oh2Yz+ewWCzEY6aYKKBZCAGYs1wuYTabKdNNMWWxnaA4gp3Yry5JBZRlWTXDvaozUgGTyQSyLAP0dbb3DtQlmcan0yngT2ekE9ARc+z4AvC7nauh9iouhpcGamJeX8XF8MaClwaeROWRA7nk+tUnyzGvZrKg0/40gdME/t8EvgG0/NOS6v9NHQAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAbNJREFUWAntV8FqwkAQnaymUkpChB7tKSfxWCie/Yb+gbdeCqGf0YsQ+hU95QNyDoWCF/HkqdeiIaEUqyZ1ArvodrOHxanQOiCzO28y781skKwFW3scPV1/febP69XqarNeNTB2KGs07U3Ttt/Ozp3bh/u7V7muheQf6ftLUWyYDB5yz1ijuPAub2QRDDunJsdGkAO55KYYjl0OUu1VXOzQZ64Tr+IiPXedGI79bQHdbheCIAD0dUY6gV6vB67rAvo6IxVgWVbFy71KBKkAFaEc2xPQarXA931ot9tyHphiPwpJgSbfe54Hw+EQHMfZ/msVEEURjMfjCjbFeG2dFxPo9/sVOSYzxmAwGIjnTDFRQLMQAjQ5pJAQkCQJ5HlekeERxHEsiE0xUUCzEO9AmqYQhiF0Oh2Yz+ewWCzEY6aYKKBZCAGYs1wuYTabKdNNMWWxnaA4gp3Yry5JBZRlWTXDvaozUgGTyQSyLAP0dbb3DtQlmcan0yngT2ekE9ARc+z4AvC7nauh9iouhpcGamJeX8XF8MaClwaeROWRA7nk+tUnyzGvZrKg0/40gdME/t8EvgG0/NOS6v9NHQAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+</div>
+<div class="item-list"><ul><li class="first"><a href="https://circuitdigest.com/user/register" title="Create a new user account.">Create new account</a></li>
+<li class="last"><a href="https://circuitdigest.com/user/password" title="Request new password via e-mail.">Request new password</a></li>
+</ul></div><input type="hidden" name="form_build_id" value="form-8rl66fQCmFv5pHBhnOtAZHQyDk_qBi89Ri_svTjcrfw">
+<input type="hidden" name="form_id" value="user_login_block">
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Log in" class="form-submit"></div></div></form>  </div>
+</div>
+  </div>
+    </div>
+		
+	            
+	<!-- <div class="col-md-4 news-text-block" style="width:100%"> --> 
+	        <!-- </div> --> 
+	<div id="floatad" class="">
+<!-- /21034905/boombox2 -->
+<div id="div-gpt-ad-1533626231783-1" style="height:250px; width:300px;margin-left: auto; margin-right: auto;">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533626231783-1'); });
+</script>
+</div>
+</div>
+  </aside>
+</div>
+<!-- End last column -->        
+      </div><!-- .blog-content -->
+    </div><!-- .main-content -->
+
+    <!-- End Main Banner -->
+<div class="mag-content clearfix">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="ad728-wrapper">
+              </div>
+    </div>
+  </div>
+</div>
+<!-- End Main Banner -->
+  </div><!-- .main-wrapper -->
+
+<!-- Footer -->
+<footer class="footer source-org vcard copyright clearfix" id="footer" role="contentinfo">
+  <div class="footer-main">
+    <div class="fixed-main">
+      <div class="container">
+        <div class="mag-content">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="footer-block clearfix">
+                                  		
+		        
+        		<!--welcome ad is running in footer block-->
+		            
+          <!--CD_custom- footer column one Footer Social Links-->
+          <p><img alt="Circuit Digest" src="./12V to 5V Buck Converter Circuit using MC34063_files/cd_logo.png" style="float:center; height:37px; width:160px"></p><br>
+<p>Connect with us on social media and stay updated with latest news, articles and projects!
+</p><ul class="social-list clearfix"><li class="social-facebook"><a target="_blank" href="https://www.facebook.com/circuitdigest/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li><li class="social-twitter" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Twitter"><a target="_blank" href="https://twitter.com/CircuitDigest"><i class="fa fa-twitter"></i></a></li><li class="social-gplus"><a target="_blank" href="https://plus.google.com/+Circuitdigest" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Google+"><i class="fa fa-google-plus"></i></a></li><li class="social-youtube"><a target="_blank" href="https://www.youtube.com/channel/UCy3CUAIYgZdAOG9k3IPdLmw" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Youtube"><i class="fa fa-youtube"></i></a></li><li class="social-instagram"><a target="_blank" href="https://www.instagram.com/circuit_digest/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Instagram"><i class="fa fa-instagram"></i></a></li><li class="social-pinterest"><a target="_blank" href="https://www.pinterest.com/circuitdigest/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Pinterest"><i class="fa fa-pinterest"></i></a></li><li class="social-linkedin"><a target="_blank" href="https://www.linkedin.com/company/circuit-digest/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i> </a></li></ul>
+
+              </div><!-- Footer Block -->
+            </div>
+            <div class="col-md-2">
+              <div class="footer-block clearfix">
+                                
+                <!--CD_custom- footer column two Footer Category-->
+                <h3 class="footer-title">Categories</h3>
+
+<ul class="footer-menu">
+        <li><a href="https://circuitdigest.com/embedded">Embedded Electronics</a></li>
+	<li><a href="https://circuitdigest.com/power-electronics">Power Electronics</a></li>	
+	<li><a href="https://circuitdigest.com/analog-electronics">Analog Electronics</a></li>
+	<li><a href="https://circuitdigest.com/internet-of-things">Internet of Things</a></li>
+	<li><a href="https://circuitdigest.com/audio-electronics">Audio Electronics</a></li>
+</ul>
+              </div><!-- Footer Block -->
+            </div>
+
+            <div class="col-md-3">
+              <div class="footer-block clearfix">
+                        <!--CD_custom- footer column Three Footer Tags-->
+        <h3 class="footer-title"><span>Popular</span></h3>
+ <ul class="tags-widget">
+	<li><a href="https://circuitdigest.com/robotics-projects">Robotics</a></li>
+	<li><a href="https://circuitdigest.com/555-timer-circuits">555 Circuits</a></li>
+	<li><a href="https://circuitdigest.com/arduino-projects">Arduino Projects</a></li>
+	<li><a href="https://circuitdigest.com/simple-raspberry-pi-projects-for-beginners">Raspberry Pi Projects</a></li>
+<li><a href="https://circuitdigest.com/news">Electronics News</a></li>
+<li><a href="https://circuitdigest.com/forums">Electronics Forum</a></li>
+<li><a href="https://circuitdigest.com/calculators">Calculators</a></li>
+</ul>
+        
+              </div><!-- Footer Block -->
+            </div>
+
+            <div class="col-md-3">
+              <div class="footer-block clearfix">
+                <h3 class="footer-title">Newsletter</h3>
+                <div class="region region-footer4-newsletter">
+    <div id="block-simplenews-113" class="block block-simplenews newsletter-default">
+
+    
+  <div class="content">
+          <p>Sign Up for Latest News</p>
+  
+      <form class="simplenews-subscribe" action="https://circuitdigest.com/electronic-circuits/12v-to-5v-buck-converter-circuit-diagram" method="post" id="simplenews-block-form-113" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-mail">
+  <label for="edit-mail" style="display: none;">E-mail <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-mail" name="mail" value="" size="20" maxlength="128" class="form-text required form-control" placeholder="Enter your email">
+</div>
+<input type="submit" id="edit-submit--2" name="op" value="Subscribe" class="form-submit btn btn-default"><input type="hidden" name="form_build_id" value="form-bD71aMOns7JnULVfRN1AMDcM2zMUKbF374ODOtQXx5I">
+<input type="hidden" name="form_id" value="simplenews_block_form_113">
+</div></form>  
+  
+  
+    </div>
+</div>
+  </div>
+              <!--CD_custom- footer column Four- second row-->
+              <hr style="border-top: 1px solid #a09d9d;">
+<p><a href="https://circuitdigest.com/hardware-start-up-listing" style="color: #a09d9d;">Hardware Startup?</a></p>
+              
+              </div><!-- Footer Block -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom clearfix">
+    <div class="fixed-main">
+      <div class="container">
+        <div class="mag-content">
+          <div class="row">
+            <div class="col-md-6">
+                            <!--CD_custom- footer copyright-->
+              <div>Copyright © 2019&nbsp;<a href="http://circuitdigest.com/">Circuit Digest</a>. All rights reserved.</div>
+              
+            </div>
+
+            <div class="col-md-6">
+              <div class="social-icons pull-right">
+                        
+            <!--CD_custom- footer Privacy links-->
+            <div><a href="http://circuitdigest.com/privacy-policy" rel="nofollow">Privacy Policy</a>&nbsp;|<a href="https://circuitdigest.com/cookie-policy">Cookie Policy</a>&nbsp;|<a href="https://circuitdigest.com/terms-of-use">Terms of Use</a>&nbsp;|<a href="http://circuitdigest.com/contact">Contact Us</a>&nbsp;|<a href="http://circuitdigest.com/advertise">Advertise</a></div>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+</div><!-- End Main -->
+
+<!-- Mobile Menu -->
+
+<!-- / Mobile Menu -->
+<nav id="mobile-nav" style="display:none;">
+<ul class="nav navbar-nav"><li class="first leaf"><a href="https://circuitdigest.com/news">News</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/tech-articles">Articles</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/tutorials">Tutorials</a></li>
+<li class="expanded"><a href="https://circuitdigest.com/electronics-projects">Projects</a><ul class="nav navbar-nav"><li class="first leaf"><a href="https://circuitdigest.com/555-timer-circuits">555 Timer Circuits</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/op-amp-circuits">Op-amp Circuits</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/audio-circuits">Audio Circuits</a></li>
+<li class="collapsed"><a href="https://circuitdigest.com/electronic-circuits">All Electronic Circuits</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/arduino-projects">Arduino Projects</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/simple-raspberry-pi-projects-for-beginners">Raspberry Pi Projects</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/msp430-projects">MSP430 Projects</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/esp8266-projects">ESP8266 Projects</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/pic-microcontroller-projects">PIC Projects</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/avr-microcontroller-projects">AVR Projects</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/8051-microcontroller-projects">8051 Projects</a></li>
+<li class="leaf"><a href="http://circuitdigest.com/internet-of-things-iot-projects" title="">IoT Projects</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/diy-pcb-projects">PCB Projects</a></li>
+<li class="leaf"><a href="https://circuitdigest.com/arduino-esp8266-projects" title="">Arduino ESP8266 Projects</a></li>
+<li class="last leaf"><a href="https://circuitdigest.com/microcontroller-projects" title="">All Microcontroller Projects</a></li>
+</ul></li>
+<li class="leaf"><a href="https://circuitdigest.com/forums">Forum</a></li>
+<li class="last expanded"><a href="https://circuitdigest.com/contact" title="">Contact</a><ul class="nav navbar-nav"><li class="first last leaf"><a href="https://circuitdigest.com/advertise">Advertise</a></li>
+</ul></li>
+</ul></nav>
+<div id="go-top-button" class="fa fa-angle-up" title="Scroll To Top" style="bottom: -100px;"></div>
+<div class="mobile-overlay" id="mobile-overlay"></div>  <script type="text/javascript" src="./12V to 5V Buck Converter Circuit using MC34063_files/js__unokjsmJZN9lUUkN9k7Q-bsBJUR2RJCJfhqG6vaxQl0__TEpLRN2KRG1xBkSVC2GJoEH9caGVMlUqIxfFl2OoAzc__Si4nJgwqcukDsAs0UYzgS7s-fYCWJKHDSMD2ZJhG910.js.download"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.google_analytics_uacct="UA-62912293-1";
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-62912293-1",{cookieDomain:"auto"});ga("require","displayfeatures");ga("set","anonymizeIp",true);ga("send","pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="./12V to 5V Buck Converter Circuit using MC34063_files/js__v_4yJHVtE6RUu6yqhWqVJhN8cT82FDxs_Va_i0KPQGA__mFml0eTBGt4Zt75I9avty0-9fzICGI7eSL0hEU39syM__Si4nJgwqcukDsAs0UYzgS7s-fYCWJKHDSMD2ZJhG910.js.download"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var eu_cookie_compliance_cookie_name="";
+//--><!]]>
+</script>
+     
+
+<div id="sliding-popup" class="sliding-popup-bottom" style="height: auto; width: 100%; bottom: 0px;"><div>
+  <div class="popup-content info">
+    <div id="popup-text">
+      <p><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">This website uses cookies to improve user experience. By using the website you are giving your consent to set cookies. For more information, read our <u><a href="https://circuitdigest.com/cookie-policy" rel="nofollow" target="_blank">cookie policy</a></u> and <u><a href="http://circuitdigest.com/privacy-policy" rel="nofollow" target="_blank">privacy policy</a></u>.</span></span></p>
+    </div>
+    <div id="popup-buttons">
+      <button type="button" class="agree-button">OK, I Understand</button>
+          </div>
+  </div>
+</div></div></body></html>
