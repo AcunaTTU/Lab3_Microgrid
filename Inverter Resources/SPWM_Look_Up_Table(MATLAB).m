@@ -29,7 +29,9 @@ end
 
 end
 
-
+% % Save lookup table on Windows
 %fileID = fopen('C:\Users\Olive\OneDrive\Desktop\lookup_10uS.txt','w');
+
+ % Save lookup table on Machintosh
 fileID = fopen('/Users/oliverrodriguez/Desktop/lookup_100uS.txt','w');
 fprintf(fileID,'%d,\n', time);        
